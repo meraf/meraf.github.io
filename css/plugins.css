@@ -1,0 +1,66 @@
+/*!* Document mafi*/
+/*   ========================================================================== *!*/
+
+/*#mafi-header {*/
+/*  width: 100%;*/
+/*  height: 75px;*/
+/*  position: absolute;*/
+/*  display: flex;*/
+/*  align-items: center;*/
+/*  justify-content: center;*/
+/*  bottom: 0;*/
+/*}*/
+
+#mafi {
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+#mafi #mafi-name {
+  font-size: 80px;
+  font-weight: bolder;
+  margin: 50px 0 0 0;
+}
+
+/*#mafi #mafi-name-amharic {*/
+/*  font-size: 80px;*/
+/*  font-weight: bolder;*/
+/*  margin: 50px 0 0 0;*/
+/*}*/
+
+#mafi #mafi-role {
+  font-size: 50px;
+  font-weight: lighter;
+  margin: 0;
+}
+
+#mafi .mafi-link {
+  margin: 0 5px;
+  font-weight: 400;
+  color: #343a40;
+  text-decoration: none;
+}
+
+#mafi .mafi-link:hover {
+  color: #6c757d;
+  text-decoration: none;
+}
+
+#products {
+  margin: 50px 100px 10px 100px;
+}
+
+#mafi-footer {
+  width: 100%;
+  height: 100px;
+  /*position: absolute;*/
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*bottom: 0;*/
+}
+
+#mafi-footer h5 {
+  font-weight: lighter;
+}
