@@ -1,150 +1,216 @@
 <!doctype html>
-<html class="no-js" lang="">
-
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>Meraf Legesse - (mafi)</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <link rel="icon" type="image/x-icon" href="favicon.png">
-
-  <link rel="stylesheet" href="css/plugins.css">
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-
-  <link rel="stylesheet" href="css/vendor/fontawesome/all.min.css">
-  <link rel="stylesheet" href="css/vendor/bootstrap/bootstrap.min.css">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
-        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <meta name="theme-color" content="#fafafa">
+<meta charset="utf-8">
+<title>Meraf Legesse Sertse | Fullstack developer in Addis Ababa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Meraf Legesse Sertse (mafi) is a fullstack developer in Addis Ababa, Ethiopia. Browse his websites, management systems and mobile apps.">
+<meta name="theme-color" content="#0A2620">
+<link rel="canonical" href="https://meraf.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Meraf Legesse Sertse | Fullstack developer">
+<meta property="og:description" content="Websites, management systems and mobile apps built in Addis Ababa. Browse the projects.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://meraf.github.io/">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Meraf Legesse Sertse","alternateName":"mafi","jobTitle":"Fullstack Developer","url":"https://meraf.github.io/","email":"mailto:meraflegesse@gmail.com","telephone":"+251924598198","address":{"@type":"PostalAddress","addressLocality":"Addis Ababa","addressCountry":"ET"},"sameAs":["https://github.com/meraf","https://linkedin.com/in/meraf-legesse","https://twitter.com/meraf_legesse","https://medium.com/@meraflegesse","https://t.me/meraf_legesse"]}</script>
+<script>try{var t=localStorage.getItem("t")||(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark")}catch(e){t="dark"}document.documentElement.dataset.theme=t</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600&family=Syne:wght@700;800&display=swap">
+<style>
+:root{--bg:#0A2620;--sf:#10352D;--ln:#24534A;--tx:#EEF3EE;--mu:#A3BAB0;--ac:#F5C518;--oa:#0A2620;color-scheme:dark}
+:root[data-theme=light]{--bg:#F3F6F2;--sf:#fff;--ln:#D2DDD4;--tx:#0E2A23;--mu:#506B61;--ac:#0B6B3A;--oa:#fff;color-scheme:light}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:4.5rem}
+body{margin:0;background:var(--bg);color:var(--tx);font:400 1.0625rem/1.6 Figtree,system-ui,-apple-system,"Segoe UI",sans-serif;-webkit-text-size-adjust:100%}
+a{color:inherit}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;margin:0}
+.wrap{width:min(1120px,100% - 2.5rem);margin-inline:auto}
+:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--ln)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.7rem 0}
+.nav b{font:800 1.15rem Syne,sans-serif}
+.nav div{display:flex;align-items:center;gap:1.1rem}
+.nav a{text-decoration:none;color:var(--mu)}
+.nav a:hover{color:var(--tx)}
+#th{font:inherit;cursor:pointer;color:var(--tx);background:none;border:1px solid var(--ln);border-radius:999px;padding:.3rem .9rem}
+.hero{padding:clamp(3rem,10vw,7rem) 0 clamp(3rem,8vw,5rem)}
+.hero h1{font-weight:800;font-size:clamp(3.2rem,13vw,9rem);line-height:.92;letter-spacing:-.04em}
+.hero h1 span{display:block}
+.stripe{display:block;height:10px;width:min(420px,70%);margin:1.6rem 0;transform-origin:left;background:linear-gradient(90deg,#078930 0 33.3%,#FCDD09 33.3% 66.6%,#DA121D 66.6%);animation:draw 1s .2s both cubic-bezier(.2,.7,.2,1)}
+@keyframes draw{from{transform:scaleX(0)}}
+.lead{font-size:clamp(1.15rem,2.6vw,1.5rem);max-width:34ch;margin:0 0 .6rem}
+.aka{color:var(--mu);margin:0 0 2rem}
+.btn{display:inline-block;padding:.8rem 1.35rem;border-radius:999px;background:var(--ac);color:var(--oa);font-weight:600;text-decoration:none;border:1px solid var(--ac);margin:0 .6rem .6rem 0}
+.btn.ghost{background:none;color:var(--tx);border-color:var(--ln)}
+.btn:hover{border-color:var(--tx)}
+section{padding:clamp(3rem,8vw,5rem) 0}
+h2{font-weight:700;font-size:clamp(1.9rem,5vw,3rem);letter-spacing:-.02em}
+.sub{color:var(--mu);max-width:60ch;margin:.6rem 0 1.6rem}
+.tools{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-bottom:1.2rem}
+#q{flex:1 1 220px;max-width:340px;font:inherit;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.65rem 1.1rem}
+#chips{display:flex;flex-wrap:wrap;gap:.5rem}
+#chips button{font:inherit;font-size:.95rem;cursor:pointer;color:var(--tx);background:none;border:1px solid var(--ln);border-radius:999px;padding:.4rem 1rem}
+#chips button[aria-pressed=true]{background:var(--ac);color:var(--oa);border-color:var(--ac);font-weight:600}
+#count{color:var(--mu);margin:0 0 1rem;font-size:.95rem}
+#grid{display:grid;gap:1rem;grid-auto-flow:dense;grid-template-columns:repeat(auto-fill,minmax(min(100%,290px),1fr))}
+.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:.55rem;min-height:175px;padding:1.3rem;border:1px solid var(--ln);border-radius:14px;background:var(--sf);transition:border-color .2s,transform .2s}
+.card:hover{border-color:var(--ac);transform:translateY(-3px)}
+.card:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+.card h3{font-size:1.35rem;line-height:1.15}
+.card p{margin:0;color:var(--mu)}
+.card.big{border-top:4px solid var(--ac)}
+.card.big h3{font-size:1.8rem}
+@media(min-width:700px){.card.big{grid-column:span 2}}
+.cat{display:flex;align-items:center;gap:.5rem;font-size:.88rem;color:var(--mu)}
+.cat:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--ac)}
+#none{color:var(--mu)}
+dialog{width:min(580px,92vw);max-height:88vh;padding:0;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:18px}
+dialog::backdrop{background:rgba(0,0,0,.65)}
+#dc{padding:1.6rem}
+#dc h3{font-size:1.9rem;margin:.5rem 0 .8rem}
+#dc p{margin:0 0 1.4rem}
+.x{position:absolute;top:.6rem;right:.7rem;font:inherit;font-size:1.6rem;line-height:1;cursor:pointer;color:var(--tx);background:none;border:0;padding:.3rem .6rem}
+.rl{list-style:none;margin:0;padding:0;display:grid;gap:.75rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,260px),1fr))}
+.rl a{display:flex;flex-direction:column;gap:.3rem;height:100%;padding:1rem 1.1rem;border:1px solid var(--ln);border-radius:12px;background:var(--sf);text-decoration:none}
+.rl a:hover{border-color:var(--ac)}
+.rl b{overflow-wrap:anywhere}
+.rl span{color:var(--mu);font-size:.92rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.rl i{display:flex;gap:.9rem;font-style:normal;color:var(--mu);font-size:.85rem;margin-top:auto}
+.err{color:var(--mu)}
+.cg{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,250px),1fr));margin-bottom:1.6rem}
+.cg>*{display:block;margin:0;padding:1.2rem 1.3rem;border:1px solid var(--ln);border-radius:14px;background:var(--sf);text-decoration:none;overflow-wrap:anywhere}
+.cg a:hover{border-color:var(--ac)}
+.cg small{display:block;color:var(--mu);font-size:.88rem}
+.soc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.soc a{display:block;padding:.5rem 1.1rem;border:1px solid var(--ln);border-radius:999px;text-decoration:none}
+.soc a:hover{border-color:var(--ac)}
+footer{border-top:1px solid var(--ln);padding:1.6rem 0 2.2rem;color:var(--mu);font-size:.95rem}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
 </head>
-
 <body>
-<!--  &lt;!&ndash;[if IE]>-->
-<!--    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="#" href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>-->
-<!--  <![endif]&ndash;&gt;-->
+<nav class="nav"><div class="wrap"><b>mafi</b><div><a href="#projects">Projects</a><a href="#repos">Repositories</a><a href="#contact">Contact</a><button id="th" type="button" aria-label="Switch between light and dark theme">Theme</button></div></div></nav>
 
-<!--  Add your site or application content here -->
-<!--  <p>Hello world! This is HTML5 Boilerplate.</p>-->
-<!--  <div id="mafi-header">-->
-<!--    <h5>Copyright © 2020 meraflegesse@gmail.com</h5>-->
-<!--  </div>-->
+<header class="hero wrap">
+<h1><span>Meraf</span><span>Legesse</span><span>Sertse</span></h1>
+<i class="stripe"></i>
+<p class="lead">Fullstack developer in Addis Ababa. I build websites, management systems and mobile apps.</p>
+<p class="aka">Also known as mafi.</p>
+<a class="btn" href="#projects">Browse projects</a><a class="btn ghost" href="#contact">Get in touch</a>
+</header>
 
-  <div id="mafi">
-    <h1 id="mafi-name">Meraf Legesse Sertse</h1>
-<!--    <h1 id="mafi-name-amharic">ምእራፍ ለገሰ ሰርጸ</h1>-->
-    <P id="mafi-role">Fullstack Developer</P>
+<main>
+<section id="projects" class="wrap">
+<h2>Projects</h2>
+<p class="sub">Search by name or pick a category. Each project opens with details and a link to its code.</p>
+<div class="tools"><input id="q" type="search" placeholder="Search projects" aria-label="Search projects"><div id="chips"></div></div>
+<p id="count" aria-live="polite"></p>
+<div id="grid"></div>
+<p id="none" hidden>No project matches that search. Clear it or pick All.</p>
+<noscript><p><a href="https://github.com/meraf?tab=repositories">Browse all projects on GitHub</a></p></noscript>
+</section>
 
-    <div style="margin-top: 50px">
-      <a href="mailto:meraflegesse@gmail.com" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fas fa-envelope" style="font-size: 75px"></i>
-      </a>
-      <a href="https://linkedin.com/in/meraf-legesse" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-linkedin" style="font-size: 75px"></i>
-      </a>
-      <a href="https://github.com/meraf" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-github" style="font-size: 75px"></i>
-      </a>
-      <a href="https://twitter.com/meraf_legesse" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-twitter" style="font-size: 75px"></i>
-      </a>
-      <a href="https://medium.com/@meraflegesse" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-medium" style="font-size: 75px"></i>
-      </a>
-      <a href="https://www.reddit.com/user/Meraf_Legesse" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-reddit" style="font-size: 75px"></i>
-      </a>
-      <a href="https://www.facebook.com/mafilegesse1" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-facebook" style="font-size: 75px"></i>
-      </a>
-      <a href="https://t.me/meraf_legesse" class="btn btn-link mafi-link"
-         role="button" target="_blank" aria-pressed="true">
-        <i class="fab fa-telegram" style="font-size: 75px"></i>
-      </a>
-    </div>
-  </div>
+<section id="repos" class="wrap">
+<h2>Every repository</h2>
+<p class="sub" id="rc">Loading the live list from GitHub.</p>
+<ul class="rl" id="rl"></ul>
+</section>
 
-  <div id="products">
-    <div class="row">
-      <div class="col-sm-8 d-flex align-items-center justify-content-start">
-        <P style="font-size: 50px; font-weight: bold">Products&lt;/&gt;</P>
-      </div>
-      <br>
-      <br>
-      <div class="col-sm-4 d-flex align-items-center justify-content-end">
-        
-      </div>
-    </div>
-    <div class="row">
-      <div class="col-sm-6">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">HIMS</h5>
-            <p class="card-text">A fast, flexible and simple Hospital mangment system.</p>
-          </div>
-          <div class="card-footer">
-            <a href="https://github.com/meraf/HIMS" target="_blank" class="btn btn-dark">More Detail</a>
-          </div>
-        </div>
-      </div>
+<section id="contact" class="wrap">
+<h2>Contact</h2>
+<p class="sub">Tell me about your project and what you need built.</p>
+<div class="cg">
+<a href="mailto:meraflegesse@gmail.com"><small>Email</small>meraflegesse@gmail.com</a>
+<a href="tel:+251924598198"><small>Phone</small>+251 92 459 8198</a>
+<p><small>Based in</small>Addis Ababa, Ethiopia</p>
+</div>
+<ul class="soc">
+<li><a href="https://github.com/meraf" target="_blank" rel="noopener">GitHub</a></li>
+<li><a href="https://linkedin.com/in/meraf-legesse" target="_blank" rel="noopener">LinkedIn</a></li>
+<li><a href="https://t.me/meraf_legesse" target="_blank" rel="noopener">Telegram</a></li>
+<li><a href="https://twitter.com/meraf_legesse" target="_blank" rel="noopener">Twitter</a></li>
+<li><a href="https://medium.com/@meraflegesse" target="_blank" rel="noopener">Medium</a></li>
+<li><a href="https://www.reddit.com/user/Meraf_Legesse" target="_blank" rel="noopener">Reddit</a></li>
+<li><a href="https://www.facebook.com/mafilegesse1" target="_blank" rel="noopener">Facebook</a></li>
+</ul>
+</section>
+</main>
 
-      <div class="col-sm-6" style="padding-top: 5px;">
-        <div class="card h-100">
-          <div class="card-body">
-            <h5 class="card-title">Lyric Finder <span class="badge badge-secondary">New</span></h5>
-            <p class="card-text">An intutive demo song and songs lyric finder.</p>
-          </div>          <div class="card-footer">
-            <a href="https://github.com/meraf/lyricfinder" target="_blank" class="btn btn-dark">More Detail</a>
-          </div>
-        </div>
-      </div>
+<footer><div class="wrap">© <span id="yr">2026</span> Meraf Legesse Sertse</div></footer>
 
-    </div>
-  </div>
+<dialog id="dlg"><form method="dialog"><button class="x" aria-label="Close">×</button></form><div id="dc"></div></dialog>
 
-  <div class="d-flex align-items-center justify-content-center font-weight-lighter"
-       style="margin: 50px 0 25px 0; font-size: 20px;">
-    <i class="fas fa-envelope mx-3" style="font-size: 40px"></i> meraflegesse@gmail.com
-    <i class="fas fa-phone mx-3" style="font-size: 40px"></i> +251924598198
-    <i class="fas fa-map-marker-alt mx-3" style="font-size: 40px" id="mafff"></i> <span id="mafff">Addis Ababa, Ethiopia </span>
+<script>
+/* Edit this list to change the project cards.
+   r = [label, repo name] pairs, s = featured (wider card),
+   live = a live demo URL; when filled in, an "Open live demo" button appears. */
+const P=[
+{n:"Samket Technologies",c:"Business",s:1,r:[["Code","SamketTechnologies"]],live:"",
+ d:"Website and shop system for a computer and mobile sales and repair business.",
+ l:"A public storefront with items, testimonials, location and online repair tickets, paired with a shop-side app for stock with low-stock warnings, sales, repair tickets and warranty. Designed to keep working without wifi and sync across devices."},
+{n:"PhoneBackup",c:"Mobile",s:1,r:[["Code","PhoneBackup"]],live:"",
+ d:"Android app that backs up new photos and videos to a private Telegram channel.",
+ l:"Watches the folders you choose, such as DCIM, Pictures and WhatsApp, and uploads each new photo and video once, in the order it was taken. Includes upload scheduling and a restore view."},
+{n:"Saint Michael Website",c:"Web",r:[["Code","Saint-Michale-Website"]],live:"",
+ d:"Public website for Saint Michael.",
+ l:"The public website half of the Saint Michael project. Its companion, Saint Michael System, covers the management side."},
+{n:"Saint Michael System",c:"Business",r:[["Code","Saint-Michale-System"]],live:"",
+ d:"Management system built alongside the Saint Michael website.",
+ l:"The management system that goes with the Saint Michael website."},
+{n:"Luxury Fixtures",c:"Web",r:[["Code","luxury-fixtures"]],live:"",
+ d:"Website for a luxury fixtures brand.",
+ l:"A showcase website for luxury fixtures."},
+{n:"Lamed English",c:"Education",r:[["Code","Lamed-English"],["Second repository","lamed_english"]],live:"",
+ d:"English language learning project.",
+ l:"An English language learning project, kept in two repositories."},
+{n:"Food Ordering and Restaurant",c:"Food",r:[["Online Food Ordering System","Online-Food-Ordering-System"],["Online Food and Restaurant","online-food-and-restaurant-master"],["Food and Restaurant","food-and-restaurant-master"]],live:"",
+ d:"Restaurant and online food ordering systems, in three versions.",
+ l:"A family of restaurant and online food ordering projects. Pick a version to see its code."},
+{n:"HIMS",c:"Business",r:[["Code","HIMS"]],live:"",
+ d:"A fast, flexible and simple hospital management system.",
+ l:"A fast, flexible and simple hospital management system."},
+{n:"Lyric Finder",c:"Web",r:[["Code","LyricFinder-"]],live:"",
+ d:"An intuitive demo song and lyric finder.",
+ l:"An intuitive demo song and lyric finder."}
+];
+const $=s=>document.querySelector(s),G="https://github.com/meraf/",R=document.documentElement,dlg=$("#dlg");
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+let cat="All",term="";
+const cats=["All",...new Set(P.map(p=>p.c))];
+$("#chips").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c==="All"}">${c}</button>`).join("");
+function draw(){
+ const L=P.filter(p=>(cat==="All"||p.c===cat)&&(p.n+" "+p.d+" "+p.c).toLowerCase().includes(term));
+ $("#grid").innerHTML=L.map(p=>`<button type="button" class="card${p.s?" big":""}" data-i="${P.indexOf(p)}"><span class="cat">${p.c}</span><h3>${p.n}</h3><p>${p.d}</p></button>`).join("");
+ $("#none").hidden=L.length>0;
+ $("#count").textContent=L.length+(L.length===1?" project":" projects");
+}
+$("#chips").onclick=e=>{const b=e.target.closest("button");if(!b)return;cat=b.textContent;[...$("#chips").children].forEach(x=>x.setAttribute("aria-pressed",x===b));draw()};
+$("#q").oninput=e=>{term=e.target.value.trim().toLowerCase();draw()};
+$("#grid").onclick=e=>{
+ const b=e.target.closest(".card");if(!b)return;const p=P[b.dataset.i];
+ $("#dc").innerHTML=`<span class="cat">${p.c}</span><h3>${p.n}</h3><p>${p.l||p.d}</p>`+
+  (p.live?`<a class="btn" href="${p.live}" target="_blank" rel="noopener">Open live demo</a>`:"")+
+  p.r.map(([t,r],i)=>`<a class="btn${i||p.live?" ghost":""}" href="${G+r}" target="_blank" rel="noopener">${p.r.length>1?t:"View code on GitHub"}</a>`).join("");
+ dlg.showModal();
+};
+dlg.onclick=e=>{if(e.target===dlg)dlg.close()};
+$("#th").onclick=()=>{const t=R.dataset.theme==="light"?"dark":"light";R.dataset.theme=t;try{localStorage.setItem("t",t)}catch(e){}};
+$("#yr").textContent=new Date().getFullYear();
+draw();
 
-  </div>
-
-  <div id="mafi-footer">
-    <h5>Copyright © 2020 meraflegesse@gmail.com</h5>
-  </div>
-
-  <script src="js/vendor/fontawesome/all.min.js"></script>
-  <script src="js/vendor/modernizr-3.8.0.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.min.js"
-          integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.1.min.js"><\/script>')</script>
-  <script src="js/vendor/bootstrap/bootstrap.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
-          integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-  <script src="js/vendor/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
-          integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async></script>
+let loaded=0;
+function loadRepos(){
+ if(loaded++)return;
+ fetch("https://api.github.com/users/meraf/repos?per_page=100&sort=pushed")
+ .then(r=>r.ok?r.json():Promise.reject())
+ .then(a=>{
+  $("#rc").textContent=a.length+" public repositories, newest activity first.";
+  $("#rl").innerHTML=a.map(r=>`<li><a href="${esc(r.html_url)}" target="_blank" rel="noopener"><b>${esc(r.name)}</b><span>${esc(r.description||"No description yet")}</span><i><em>${esc(r.language||"")}</em><em>${new Date(r.pushed_at).toLocaleDateString("en",{month:"short",year:"numeric"})}</em></i></a></li>`).join("");
+ })
+ .catch(()=>{$("#rc").innerHTML='GitHub did not respond. <a href="https://github.com/meraf?tab=repositories">Open the full list on GitHub</a>.'});
+}
+"IntersectionObserver" in window?new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){loadRepos();o.disconnect()}},{rootMargin:"400px"}).observe($("#repos")):loadRepos();
+</script>
 </body>
-
 </html>
