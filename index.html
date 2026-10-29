@@ -58,21 +58,29 @@ h1,h2,h3{font-family:'Outfit',system-ui,sans-serif;margin:0}
 
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg, var(--ac), #10B981);width:0%;z-index:1000;transition:width .1s linear}
 
-/* Ultra-Slim Seamless Navbar */
+/* Ultra-Slim Seamless Responsive Navbar */
 .nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--bg) 85%, transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);transition:border-color .3s}
 .nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4.2rem;gap:.5rem}
-.logo-badge{display:flex;align-items:center;gap:.5rem;font:800 1rem 'Outfit',sans-serif;letter-spacing:-.03em;white-space:nowrap}
-.logo-icon{width:32px;height:32px;border-radius:8px;background:linear-gradient(135deg, var(--ac), #10B981);display:grid;place-content:center;color:var(--oa);font-weight:900;box-shadow:0 4px 12px var(--ac-glow)}
-.nav-links{display:flex;align-items:center;gap:.8rem}
-.nav-links a{color:var(--mu);font-weight:600;font-size:.85rem;transition:color .2s;white-space:nowrap}
+.logo-badge{display:flex;align-items:center;gap:.5rem;font:800 0.95rem 'Outfit',sans-serif;letter-spacing:-.03em;white-space:nowrap}
+.logo-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg, var(--ac), #10B981);display:grid;place-content:center;color:var(--oa);font-weight:900;box-shadow:0 4px 12px var(--ac-glow)}
+.nav-links{display:flex;align-items:center;gap:.7rem}
+.nav-links a{color:var(--mu);font-weight:600;font-size:.825rem;transition:color .2s;white-space:nowrap}
 .nav-links a:hover{color:var(--tx)}
+.nav-repos{display:none} /* Hidden on very small screens to prevent overflow */
 #th{width:34px;height:34px;border-radius:50%;background:var(--sf);border:1px solid var(--ln);color:var(--tx);display:grid;place-content:center;cursor:pointer;padding:0;transition:all .2s;flex-shrink:0}
 #th:hover{border-color:var(--ac);background:var(--sf-hover)}
 
-@media(min-width:640px){
-  .logo-badge{font-size:1.15rem;gap:.75rem}
-  .logo-icon{width:38px;height:38px;border-radius:10px}
-  .nav-links{gap:1.5rem}
+@media(min-width:480px){
+  .logo-badge{font-size:1.1rem;gap:.75rem}
+  .logo-icon{width:36px;height:36px}
+  .nav-repos{display:inline} /* Appears on screens 480px and wider */
+  .nav-links{gap:1.2rem}
+  .nav-links a{font-size:.9rem}
+}
+
+@media(min-width:768px){
+  .logo-badge{font-size:1.2rem}
+  .nav-links{gap:1.8rem}
   .nav-links a{font-size:.95rem}
   #th{width:38px;height:38px}
 }
@@ -173,7 +181,7 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
     </a>
     <div class="nav-links">
       <a href="#projects">Projects</a>
-      <a href="#repos">Repositories</a>
+      <a href="#repos" class="nav-repos">Repositories</a>
       <a href="#contact">Contact</a>
     </div>
     <button id="th" type="button" aria-label="Toggle theme">
