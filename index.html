@@ -9,7 +9,7 @@
 <link rel="canonical" href="https://meraf.github.io/">
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
 <meta property="og:title" content="Meraf Legesse Sertse | Fullstack Engineer">
-<meta property="og:description" content="Websites, enterprise management systems, and mobile apps built in Addis Ababa. Explore live repositories.">
+<meta property="og:description" content="Websites, enterprise management systems, and mobile apps built in Addis Ababa. Explore live deployments & repositories.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://meraf.github.io/">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Meraf Legesse Sertse","alternateName":"mafi","jobTitle":"Fullstack Developer","url":"https://meraf.github.io/","email":"mailto:meraflegesse@gmail.com","telephone":"+251924598198","address":{"@type":"PostalAddress","addressLocality":"Addis Ababa","addressCountry":"ET"},"sameAs":["https://github.com/meraf","https://linkedin.com/in/meraf-legesse","https://twitter.com/meraf_legesse","https://medium.com/@meraflegesse","https://t.me/meraf_legesse"]}</script>
@@ -27,7 +27,7 @@
   --ln-hover:rgba(212, 175, 25, 0.5);
   --tx:#F3F4F6;
   --mu:#9CA3AF;
-  --ac:#D4AF37; /* Champagne Gold */
+  --ac:#D4AF37;
   --ac-rgb:212,175,55;
   --ac-glow:rgba(212,175,55,0.25);
   --oa:#07090E;
@@ -42,7 +42,7 @@
   --ln-hover:rgba(180, 140, 20, 0.5);
   --tx:#0F172A;
   --mu:#64748B;
-  --ac:#9A7B1C; /* Deep Rich Gold for Light mode */
+  --ac:#9A7B1C;
   --ac-rgb:154,123,28;
   --ac-glow:rgba(154,123,28,0.2);
   --oa:#FFFFFF;
@@ -50,118 +50,103 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:5.5rem}
-body{margin:0;background:var(--bg);background-image:var(--bg-glow);background-attachment:fixed;color:var(--tx);font:400 1.05rem/1.7 'Plus Jakarta Sans',system-ui,sans-serif;-webkit-text-size-adjust:100%}
+body{margin:0;width:100%;overflow-x:hidden;background:var(--bg);background-image:var(--bg-glow);background-attachment:fixed;color:var(--tx);font:400 1rem/1.7 'Plus Jakarta Sans',system-ui,sans-serif;-webkit-text-size-adjust:100%}
 a{color:inherit;text-decoration:none}
 h1,h2,h3{font-family:'Outfit',system-ui,sans-serif;margin:0}
-.wrap{width:min(1200px,100% - 2.5rem);margin-inline:auto}
+.wrap{width:min(1200px,100% - 2rem);margin-inline:auto}
 :focus-visible{outline:3px solid var(--ac);outline-offset:3px}
 
-/* Scroll Progress Bar */
 #progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg, var(--ac), #10B981);width:0%;z-index:1000;transition:width .1s linear}
 
-/* Navigation */
 .nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--bg) 82%, transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);transition:border-color .3s}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4.8rem}
-.logo-badge{display:flex;align-items:center;gap:.85rem;font:800 1.25rem 'Outfit',sans-serif;letter-spacing:-.03em}
-.logo-icon{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg, var(--ac), #10B981);display:grid;place-content:center;color:var(--oa);font-weight:900;box-shadow:0 8px 20px var(--ac-glow)}
-.nav-links{display:flex;align-items:center;gap:1.75rem}
-.nav-links a{color:var(--mu);font-weight:600;font-size:.95rem;transition:color .2s}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4.5rem}
+.logo-badge{display:flex;align-items:center;gap:.75rem;font:800 1.15rem 'Outfit',sans-serif;letter-spacing:-.03em}
+.logo-icon{width:36px;height:36px;border-radius:10px;background:linear-gradient(135deg, var(--ac), #10B981);display:grid;place-content:center;color:var(--oa);font-weight:900;box-shadow:0 6px 16px var(--ac-glow)}
+.nav-links{display:flex;align-items:center;gap:1.2rem}
+.nav-links a{color:var(--mu);font-weight:600;font-size:.9rem;transition:color .2s}
 .nav-links a:hover{color:var(--tx)}
-#th{font:inherit;font-size:.9rem;font-weight:700;cursor:pointer;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.5rem 1.2rem;display:flex;align-items:center;gap:.5rem;transition:all .25s}
-#th:hover{border-color:var(--ac);background:var(--sf-hover);box-shadow:0 4px 15px var(--ac-glow)}
+#th{font:inherit;font-size:.85rem;font-weight:700;cursor:pointer;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.4rem 1rem;display:flex;align-items:center;gap:.4rem;transition:all .25s}
+#th:hover{border-color:var(--ac);background:var(--sf-hover)}
 
-/* Hero Section */
-.hero{padding:clamp(4rem,10vw,9rem) 0 clamp(3rem,6vw,5rem);position:relative}
-.status-pill{display:inline-flex;align-items:center;gap:.6rem;padding:.45rem 1.1rem;border-radius:999px;background:var(--sf);border:1px solid var(--ln);font-size:.875rem;font-weight:600;margin-bottom:2rem;box-shadow:0 8px 25px rgba(0,0,0,0.1)}
-.status-dot{width:8px;height:8px;border-radius:50%;background:#10B981;box-shadow:0 0 10px #10B981;animation:pulse 2s infinite}
+.hero{padding:clamp(3rem,8vw,8rem) 0 clamp(2.5rem,5vw,4rem);position:relative}
+.status-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border-radius:999px;background:var(--sf);border:1px solid var(--ln);font-size:.8rem;font-weight:600;margin-bottom:1.5rem;box-shadow:0 6px 20px rgba(0,0,0,0.1);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.status-dot{width:7px;height:7px;border-radius:50%;background:#10B981;box-shadow:0 0 8px #10B981;animation:pulse 2s infinite;flex-shrink:0}
 @keyframes pulse{0%{opacity:1}50%{opacity:.3}100%{opacity:1}}
-.hero h1{font-weight:900;font-size:clamp(3rem,9.5vw,7rem);line-height:1.02;letter-spacing:-.04em;margin-bottom:1.5rem}
+.hero h1{font-weight:900;font-size:clamp(2.5rem,8.5vw,6rem);line-height:1.05;letter-spacing:-.04em;margin-bottom:1.2rem;word-break:break-word}
 .hero h1 span{background:linear-gradient(135deg, var(--tx) 40%, var(--mu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
 .hero h1 span.highlight{background:linear-gradient(135deg, var(--ac), #38BDF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.stripe{display:block;height:6px;width:200px;margin:2rem 0;border-radius:3px;background:linear-gradient(90deg,#10B981 0 33.3%,var(--ac) 33.3% 66.6%,#38BDF8 66.6%);box-shadow:0 0 20px var(--ac-glow)}
-.lead{font-size:clamp(1.15rem,2.4vw,1.4rem);color:var(--mu);max-width:44ch;margin:0 0 2.2rem;line-height:1.75}
-.cta-group{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:3rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.6rem;padding:.9rem 1.8rem;border-radius:999px;background:var(--ac);color:var(--oa);font-weight:700;text-decoration:none;border:1px solid var(--ac);box-shadow:0 6px 25px var(--ac-glow);transition:all .3s cubic-bezier(.16,1,.3,1)}
-.btn:hover{transform:translateY(-3px);box-shadow:0 10px 30px var(--ac-glow)}
+.stripe{display:block;height:5px;width:160px;margin:1.5rem 0;border-radius:3px;background:linear-gradient(90deg,#10B981 0 33.3%,var(--ac) 33.3% 66.6%,#38BDF8 66.6%);box-shadow:0 0 15px var(--ac-glow)}
+.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--mu);max-width:44ch;margin:0 0 2rem;line-height:1.7}
+.cta-group{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-bottom:2.5rem}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.6rem;border-radius:999px;background:var(--ac);color:var(--oa);font-weight:700;text-decoration:none;border:1px solid var(--ac);box-shadow:0 5px 20px var(--ac-glow);transition:all .3s cubic-bezier(.16,1,.3,1);font-size:.95rem}
+.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--ac-glow)}
 .btn.ghost{background:var(--sf);color:var(--tx);border-color:var(--ln);box-shadow:none}
-.btn.ghost:hover{border-color:var(--ac);background:var(--sf-hover);box-shadow:0 8px 20px rgba(0,0,0,0.15)}
+.btn.ghost:hover{border-color:var(--ac);background:var(--sf-hover)}
 
-/* Live Stats Bar */
-.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;padding:1.5rem 2rem;border-radius:20px;background:var(--sf);border:1px solid var(--ln);backdrop-filter:blur(16px);box-shadow:0 15px 35px rgba(0,0,0,0.15)}
-.stat-item{display:flex;flex-direction:column;gap:.2rem}
-.stat-num{font-family:'Outfit',sans-serif;font-size:1.8rem;font-weight:800;color:var(--ac)}
-.stat-lbl{font-size:.85rem;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.05em}
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:1rem;padding:1.2rem 1.5rem;border-radius:18px;background:var(--sf);border:1px solid var(--ln);backdrop-filter:blur(16px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
+.stat-item{display:flex;flex-direction:column;gap:.1rem}
+.stat-num{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ac)}
+.stat-lbl{font-size:.8rem;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.05em}
 
-/* Sections General */
-section{padding:clamp(5rem,9vw,7rem) 0;border-top:1px solid var(--ln)}
-h2{font-weight:800;font-size:clamp(2.2rem,4.5vw,3rem);letter-spacing:-.03em;margin-bottom:.6rem}
-.sub{color:var(--mu);max-width:58ch;margin:0 0 2.8rem;font-size:1.1rem}
+section{padding:clamp(4rem,8vw,6rem) 0;border-top:1px solid var(--ln)}
+h2{font-weight:800;font-size:clamp(2rem,4vw,2.75rem);letter-spacing:-.03em;margin-bottom:.5rem}
+.sub{color:var(--mu);max-width:58ch;margin:0 0 2.2rem;font-size:1rem}
 
-/* Tools & Filters */
 .tools{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1.5rem}
-.search-wrapper{position:relative;flex:1 1 280px;max-width:400px}
-#q{width:100%;font:inherit;font-size:.95rem;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.8rem 1.4rem 8rem 1.4rem;transition:all .25s;box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)}
-#q{padding-right:3rem}
+.search-wrapper{position:relative;flex:1 1 250px;max-width:380px}
+#q{width:100%;font:inherit;font-size:.9rem;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.75rem 2.8rem .75rem 1.2rem;transition:all .25s;box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)}
 #q:focus{border-color:var(--ac);background:var(--sf-hover);box-shadow:0 0 0 4px var(--ac-glow)}
-.kbd-hint{position:absolute;right:1.2rem;top:50%;transform:translateY(-50%);background:var(--ln);color:var(--mu);font-size:.75rem;font-weight:700;padding:.2rem .5rem;border-radius:6px;pointer-events:none}
-#chips{display:flex;flex-wrap:wrap;gap:.6rem}
-#chips button{font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;color:var(--mu);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.55rem 1.3rem;transition:all .25s}
+.kbd-hint{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:var(--ln);color:var(--mu);font-size:.7rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;pointer-events:none}
+#chips{display:flex;flex-wrap:wrap;gap:.5rem}
+#chips button{font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--mu);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.5rem 1.1rem;transition:all .25s}
 #chips button:hover{color:var(--tx);border-color:var(--ln-hover)}
-#chips button[aria-pressed=true]{background:var(--ac);color:var(--oa);border-color:var(--ac);box-shadow:0 6px 20px var(--ac-glow)}
-#count{color:var(--mu);margin:0 0 1.5rem;font-size:.95rem;font-weight:600}
+#chips button[aria-pressed=true]{background:var(--ac);color:var(--oa);border-color:var(--ac);box-shadow:0 5px 15px var(--ac-glow)}
+#count{color:var(--mu);margin:0 0 1.2rem;font-size:.9rem;font-weight:600}
 
-/* Bento Grid with Spotlight Hover */
-#grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,340px),1fr))}
-.card{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;min-height:230px;padding:2rem;border:1px solid var(--ln);border-radius:24px;background:var(--sf);backdrop-filter:blur(16px);transition:all .35s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(800px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(212,175,55,0.08), transparent 40%);opacity:0;transition:opacity .3s;pointer-events:none}
-.card:hover{border-color:var(--ln-hover);transform:translateY(-6px);box-shadow:0 20px 40px rgba(0,0,0,0.25)}
+/* Bento Grid Cards - Fully Responsive */
+#grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fill,minmax(min(100%, 300px), 1fr))}
+.card{box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;min-height:240px;padding:1.6rem;border:1px solid var(--ln);border-radius:20px;background:var(--sf);backdrop-filter:blur(16px);transition:all .3s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;word-break:break-word}
+.card::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(212,175,55,0.08), transparent 40%);opacity:0;transition:opacity .3s;pointer-events:none}
+.card:hover{border-color:var(--ln-hover);transform:translateY(-4px);box-shadow:0 15px 30px rgba(0,0,0,0.2)}
 .card:hover::before{opacity:1}
-.card:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
-.card-top{display:flex;align-items:center;justify-content:space-between}
-.card h3{font-size:1.55rem;line-height:1.2;font-weight:700;letter-spacing:-.02em}
-.card p{margin:0;color:var(--mu);font-size:1rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.card-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
+.card h3{font-size:1.35rem;line-height:1.2;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
+.card p{margin:0;color:var(--mu);font-size:.95rem;line-height:1.6}
+.url-display{display:inline-block;font-size:.8rem;font-family:monospace;color:var(--ac);background:rgba(var(--ac-rgb),0.08);padding:.25rem .5rem;border-radius:6px;margin:.5rem 0;word-break:break-all;border:1px dashed rgba(var(--ac-rgb),0.2)}
 .card.big{grid-column:span 1}
 @media(min-width:768px){.card.big{grid-column:span 2}}
-.cat{display:inline-flex;align-items:center;gap:.5rem;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ac);background:rgba(var(--ac-rgb),0.12);padding:.35rem .9rem;border-radius:999px;border:1px solid rgba(var(--ac-rgb),0.25)}
+.cat{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ac);background:rgba(var(--ac-rgb),0.1);padding:.3rem .8rem;border-radius:999px;border:1px solid rgba(var(--ac-rgb),0.2)}
+.live-indicator{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;font-weight:700;color:#10B981;background:rgba(16,185,129,0.1);padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(16,185,129,0.2)}
+.card-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto;padding-top:.8rem;border-top:1px solid var(--ln)}
+.btn-card{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem 1rem;border-radius:999px;font-size:.8rem;font-weight:700;text-decoration:none;transition:all .2s;white-space:nowrap}
+.btn-card.primary{background:var(--ac);color:var(--oa);border:1px solid var(--ac);box-shadow:0 3px 12px var(--ac-glow)}
+.btn-card.primary:hover{transform:translateY(-1px);box-shadow:0 5px 15px var(--ac-glow)}
+.btn-card.ghost{background:var(--sf);color:var(--tx);border:1px solid var(--ln)}
+.btn-card.ghost:hover{border-color:var(--ac);background:var(--sf-hover)}
 
-#none{color:var(--mu);padding:4rem 0;text-align:center;font-size:1.15rem}
+#none{color:var(--mu);padding:3rem 0;text-align:center;font-size:1.05rem}
 
-/* Dialog Modal */
-dialog{width:min(640px,92vw);max-height:88vh;padding:0;color:var(--tx);background:var(--bg);border:1px solid var(--ln);border-radius:28px;box-shadow:0 30px 60px -15px rgba(0,0,0,0.6);animation:scaleUp .3s cubic-bezier(.16,1,.3,1)}
-@keyframes scaleUp{from{opacity:0;transform:scale(.94)}to{opacity:1;transform:scale(1)}}
-dialog::backdrop{background:rgba(0,0,0,0.75);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
-#dc{padding:3rem;position:relative}
-#dc h3{font-size:2.2rem;margin:.8rem 0 1.2rem;letter-spacing:-.03em}
-#dc p{margin:0 0 2rem;color:var(--mu);line-height:1.75;font-size:1.05rem}
-#dc .cat{margin-bottom:.5rem}
-.modal-actions{display:flex;flex-wrap:wrap;gap:1rem;margin-top:2rem}
-.x{position:absolute;top:1.5rem;right:1.5rem;width:42px;height:42px;border-radius:50%;display:grid;place-content:center;font-size:1.5rem;cursor:pointer;color:var(--tx);background:var(--sf);border:1px solid var(--ln);transition:all .25s}
-.x:hover{border-color:var(--ac);background:var(--sf-hover);transform:scale(1.05)}
-
-/* Repositories */
-.rl{list-style:none;margin:0;padding:0;display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,320px),1fr))}
-.rl a{display:flex;flex-direction:column;gap:.85rem;height:100%;padding:1.8rem;border:1px solid var(--ln);border-radius:22px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;transition:all .35s cubic-bezier(.16,1,.3,1)}
-.rl a:hover{border-color:var(--ln-hover);transform:translateY(-5px);box-shadow:0 15px 35px rgba(0,0,0,0.2)}
-.rl b{font-family:'Outfit',sans-serif;font-size:1.25rem;letter-spacing:-.01em;overflow-wrap:anywhere}
-.rl span{color:var(--mu);font-size:.95rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex-grow:1}
-.rl i{display:flex;align-items:center;justify-content:space-between;font-style:normal;color:var(--mu);font-size:.875rem;margin-top:auto;padding-top:1rem;border-top:1px solid var(--ln)}
-.rl em{background:rgba(var(--ac-rgb),0.1);color:var(--ac);padding:.25rem .7rem;border-radius:8px;font-style:normal;font-weight:700}
+.rl{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fill,minmax(min(100%, 300px), 1fr))}
+.rl a{display:flex;flex-direction:column;gap:.7rem;height:100%;padding:1.5rem;border:1px solid var(--ln);border-radius:18px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;transition:all .3s;word-break:break-word}
+.rl a:hover{border-color:var(--ln-hover);transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,0.15)}
+.rl b{font-family:'Outfit',sans-serif;font-size:1.15rem;letter-spacing:-.01em}
+.rl span{color:var(--mu);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex-grow:1}
+.rl i{display:flex;align-items:center;justify-content:space-between;font-style:normal;color:var(--mu);font-size:.8rem;margin-top:auto;padding-top:.8rem;border-top:1px solid var(--ln)}
+.rl em{background:rgba(var(--ac-rgb),0.1);color:var(--ac);padding:.2rem .6rem;border-radius:6px;font-style:normal;font-weight:700}
 .err{color:var(--mu);padding:2rem 0}
 
-/* Contact Grid */
-.cg{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));margin-bottom:3rem}
-.cg>*{display:flex;flex-direction:column;gap:.5rem;margin:0;padding:1.8rem;border:1px solid var(--ln);border-radius:22px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;overflow-wrap:anywhere;transition:all .3s}
-.cg a:hover,.copy-box:hover{border-color:var(--ln-hover);transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
+.cg{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%, 280px), 1fr));margin-bottom:2.5rem}
+.cg>*{display:flex;flex-direction:column;gap:.4rem;margin:0;padding:1.5rem;border:1px solid var(--ln);border-radius:18px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;word-break:break-word;transition:all .3s}
+.cg a:hover,.copy-box:hover{border-color:var(--ln-hover);transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.1)}
 .copy-box{cursor:pointer;position:relative}
-.copy-feedback{position:absolute;top:1rem;right:1rem;background:var(--ac);color:var(--oa);font-size:.75rem;font-weight:800;padding:.2rem .6rem;border-radius:6px;opacity:0;transition:opacity .2s}
-.cg small{color:var(--mu);font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.cg span,.cg a{font-weight:700;font-size:1.1rem}
-.soc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.8rem}
-.soc a{display:inline-flex;align-items:center;gap:.6rem;padding:.8rem 1.5rem;border:1px solid var(--ln);border-radius:999px;background:var(--sf);font-weight:600;font-size:.95rem;transition:all .25s}
-.soc a:hover{border-color:var(--ac);background:var(--sf-hover);transform:translateY(-2px);box-shadow:0 8px 20px var(--ac-glow)}
+.copy-feedback{position:absolute;top:1rem;right:1rem;background:var(--ac);color:var(--oa);font-size:.7rem;font-weight:800;padding:.2rem .5rem;border-radius:4px;opacity:0;transition:opacity .2s}
+.cg small{color:var(--mu);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
+.cg span,.cg a{font-weight:700;font-size:1rem}
+.soc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
+.soc a{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border:1px solid var(--ln);border-radius:999px;background:var(--sf);font-weight:600;font-size:.9rem;transition:all .25s}
+.soc a:hover{border-color:var(--ac);background:var(--sf-hover);transform:translateY(-2px);box-shadow:0 6px 15px var(--ac-glow)}
 
-/* Footer */
-footer{border-top:1px solid var(--ln);padding:3rem 0;color:var(--mu);font-size:.95rem;background:color-mix(in srgb, var(--bg) 92%, #000 8%)}
+footer{border-top:1px solid var(--ln);padding:2.5rem 0;color:var(--mu);font-size:.9rem;background:color-mix(in srgb, var(--bg) 92%, #000 8%)}
 footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
 
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
@@ -182,7 +167,7 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
       <a href="#repos">Repositories</a>
       <a href="#contact">Contact</a>
       <button id="th" type="button" aria-label="Toggle theme">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
         <span>Theme</span>
       </button>
     </div>
@@ -200,7 +185,7 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
   <div class="cta-group">
     <a class="btn" href="#projects">
       <span>Explore Projects</span>
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
     </a>
     <a class="btn ghost" href="#contact">Get in Touch</a>
   </div>
@@ -224,7 +209,7 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
 <main>
   <section id="projects" class="wrap">
     <h2>Featured Works</h2>
-    <p class="sub">Filter by category or search instantly. Press <kbd style="background:var(--ln);padding:.15rem .4rem;border-radius:4px;color:var(--tx);font-size:.85rem">/</kbd> anytime to focus search.</p>
+    <p class="sub">Filter by category or search instantly. Press <kbd style="background:var(--ln);padding:.1rem .35rem;border-radius:4px;color:var(--tx);font-size:.8rem">/</kbd> anytime to focus search.</p>
     <div class="tools">
       <div class="search-wrapper">
         <input id="q" type="search" placeholder="Search projects..." aria-label="Search projects">
@@ -238,7 +223,12 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
     <noscript><p><a href="https://github.com/meraf?tab=repositories" target="_blank" rel="noopener">Browse all projects directly on GitHub</a></p></noscript>
   </section>
 
-  
+  <section id="repos" class="wrap">
+    <h2>All Repositories</h2>
+    <p class="sub" id="rc">Fetching live public repositories from GitHub...</p>
+    <ul class="rl" id="rl"></ul>
+  </section>
+
   <section id="contact" class="wrap">
     <h2>Let's Collaborate</h2>
     <p class="sub">Have an ambitious project, systems architecture need, or software proposal? Let's connect.</p>
@@ -269,51 +259,46 @@ footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:spac
   </section>
 </main>
 
-<footer>
-  <div class="wrap">
-    <span>© <span id="yr">2026</span> Meraf Legesse Sertse. All rights reserved.</span>
-    <span>Engineered for GitHub Pages.</span>
+<footer footer style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;">
+  <div class="">
+    <span >© <span id="yr">2026</span> Meraf Legesse Sertse. All rights reserved.</span>
+    
   </div>
 </footer>
 
-<dialog id="dlg">
-  <form method="dialog"><button class="x" aria-label="Close modal">×</button></form>
-  <div id="dc"></div>
-</dialog>
-
 <script>
+// Live deployments listed first with visible deployment URLs
 const P=[
-{n:"Samket Technologies",c:"Business",s:1,r:[["Code","SamketTechnologies"]],live:"",
+{n:"Samket Technologies",c:"Business",s:1,r:[["Code","SamketTechnologies"]],live:"https://samket.vercel.app/",
  d:"Website and shop system for a computer and mobile sales and repair business.",
- l:"A public storefront with items, testimonials, location and online repair tickets, paired with a shop-side app for stock with low-stock warnings, sales, repair tickets and warranty. Designed to keep working without wifi and sync across devices."},
-{n:"PhoneBackup",c:"Mobile",s:1,r:[["Code","PhoneBackup"]],live:"",
+ l:"A public storefront with items, testimonials, location and online repair tickets, paired with a shop-side app for stock with low-stock warnings, sales, repair tickets and warranty."},
+{n:"Lamed English",c:"Education",s:1,r:[["Code","Lamed-English"],["Second repo","lamed_english"]],live:"https://lamed-english.vercel.app/",
+ d:"English language learning project.",
+ l:"An interactive English language learning project, kept across two repositories."},
+{n:"PhoneBackup",c:"Mobile",r:[["Code","PhoneBackup"]],live:"",
  d:"Android app that backs up new photos and videos to a private Telegram channel.",
- l:"Watches the folders you choose, such as DCIM, Pictures and WhatsApp, and uploads each new photo and video once, in the order it was taken. Includes upload scheduling and a restore view."},
+ l:"Watches folders like DCIM, Pictures and WhatsApp, uploading each new photo and video once in sequence."},
 {n:"Saint Michael Website",c:"Web",r:[["Code","Saint-Michale-Website"]],live:"",
  d:"Public website for Saint Michael.",
- l:"The public website half of the Saint Michael project. Its companion, Saint Michael System, covers the management side."},
+ l:"The public website half of the Saint Michael project."},
 {n:"Saint Michael System",c:"Business",r:[["Code","Saint-Michale-System"]],live:"",
  d:"Management system built alongside the Saint Michael website.",
- l:"The management system that goes with the Saint Michael website."},
+ l:"The management system counterpart for the Saint Michael project."},
 {n:"Luxury Fixtures",c:"Web",r:[["Code","luxury-fixtures"]],live:"",
  d:"Website for a luxury fixtures brand.",
- l:"A showcase website for luxury fixtures."},
-{n:"Lamed English",c:"Education",r:[["Code","Lamed-English"],["Second repository","lamed_english"]],live:"",
- d:"English language learning project.",
- l:"An English language learning project, kept in two repositories."},
-{n:"Food Ordering and Restaurant",c:"Food",r:[["Online Food Ordering System","Online-Food-Ordering-System"],["Online Food and Restaurant","online-food-and-restaurant-master"],["Food and Restaurant","food-and-restaurant-master"]],live:"",
- d:"Restaurant and online food ordering systems, in three versions.",
- l:"A family of restaurant and online food ordering projects. Pick a version to see its code."},
+ l:"A showcase web application for high-end luxury fixtures."},
+{n:"Food Ordering and Restaurant",c:"Food",r:[["Online Food System","Online-Food-Ordering-System"],["Restaurant Master","online-food-and-restaurant-master"]],live:"",
+ d:"Restaurant and online food ordering systems in multiple versions.",
+ l:"A family of restaurant and online food ordering solutions."},
 {n:"HIMS",c:"Business",r:[["Code","HIMS"]],live:"",
  d:"A fast, flexible and simple hospital management system.",
- l:"A fast, flexible and simple hospital management system."},
+ l:"An enterprise-grade hospital management system."},
 {n:"Lyric Finder",c:"Web",r:[["Code","LyricFinder-"]],live:"",
  d:"An intuitive demo song and lyric finder.",
- l:"An intuitive demo song and lyric finder."}
+ l:"An intuitive web app for finding song lyrics instantly."}
 ];
 
-const $=s=>document.querySelector(s),G="https://github.com/meraf/",R=document.documentElement,dlg=$("#dlg");
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const $=s=>document.querySelector(s),G="https://github.com/meraf/",R=document.documentElement;
 let cat="All",term="";
 const cats=["All",...new Set(P.map(p=>p.c))];
 
@@ -322,17 +307,27 @@ $("#chips").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c==="Al
 function draw(){
  const L=P.filter(p=>(cat==="All"||p.c===cat)&&(p.n+" "+p.d+" "+p.c).toLowerCase().includes(term));
  $("#grid").innerHTML=L.map(p=>`
-  <button type="button" class="card${p.s?" big":""}" data-i="${P.indexOf(p)}">
-    <div class="card-top"><span class="cat">${p.c}</span></div>
+  <article class="card${p.s?" big":""}">
     <div>
-      <h3>${p.n}</h3>
-      <p>${p.d}</p>
+      <div class="card-top">
+        <span class="cat">${p.c}</span>
+        ${p.live ? '<span class="live-indicator">● Live App</span>' : ''}
+      </div>
+      <div>
+        <h3>${p.n}</h3>
+        ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="url-display">🔗 ${p.live}</a>` : ''}
+        <p>${p.l||p.d}</p>
+      </div>
     </div>
-  </button>`).join("");
+    <div class="card-actions">
+      ${p.live ? `<a class="btn-card primary" href="${p.live}" target="_blank" rel="noopener">Open Live Site →</a>` : ''}
+      ${p.r.map(([t,r])=>`<a class="btn-card ghost" href="${G+r}" target="_blank" rel="noopener">${p.r.length>1?t:"GitHub Code"}</a>`).join("")}
+    </div>
+  </article>`).join("");
+ 
  $("#none").hidden=L.length>0;
  $("#count").textContent=`Showing ${L.length} of ${P.length} projects`;
 
- // Attach spotlight mousemove effect to newly rendered cards
  document.querySelectorAll('.card').forEach(card => {
   card.onmousemove = e => {
    const rect = card.getBoundingClientRect();
@@ -354,7 +349,6 @@ $("#q").oninput=e=>{
  draw();
 };
 
-// Keyboard shortcut '/' to focus search
 window.addEventListener('keydown', e => {
  if(e.key==='/' && document.activeElement!==$('#q')){
   e.preventDefault();
@@ -362,7 +356,6 @@ window.addEventListener('keydown', e => {
  }
 });
 
-// Copy email functionality
 $('#copyEmailBtn').onclick = () => {
  navigator.clipboard.writeText('meraflegesse@gmail.com').then(() => {
   const fb = $('#copyFeedback');
@@ -371,29 +364,12 @@ $('#copyEmailBtn').onclick = () => {
  });
 };
 
-$("#grid").onclick=e=>{
- const b=e.target.closest(".card");if(!b)return;
- const p=P[b.dataset.i];
- $("#dc").innerHTML=`
-  <span class="cat">${p.c}</span>
-  <h3>${p.n}</h3>
-  <p>${p.l||p.d}</p>
-  <div class="modal-actions">`+
-  (p.live?`<a class="btn" href="${p.live}" target="_blank" rel="noopener">Open Live Demo</a>`:"")+
-  p.r.map(([t,r],i)=>`<a class="btn${i||p.live?" ghost":""}" href="${G+r}" target="_blank" rel="noopener">${p.r.length>1?t:"View Code on GitHub"}</a>`).join("")+
-  `</div>`;
- dlg.showModal();
-};
-
-dlg.onclick=e=>{if(e.target===dlg)dlg.close()};
-
 $("#th").onclick=()=>{
  const t=R.dataset.theme==="light"?"dark":"light";
  R.dataset.theme=t;
  try{localStorage.setItem("t",t)}catch(e){}
 };
 
-// Scroll progress bar
 window.onscroll = () => {
  const h = document.documentElement;
  const st = h.scrollTop || document.body.scrollTop;
@@ -424,6 +400,8 @@ function loadRepos(){
  })
  .catch(()=>{$("#rc").innerHTML='Unable to load GitHub repositories directly. <a href="https://github.com/meraf?tab=repositories" target="_blank" rel="noopener">View full repository list on GitHub →</a>'});
 }
+
+const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
 
 "IntersectionObserver" in window?new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){loadRepos();o.disconnect()}},{rootMargin:"400px"}).observe($("#repos")):loadRepos();
 </script>
