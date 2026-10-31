@@ -1,431 +1,1343 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="utf-8">
-<title>Meraf Legesse Sertse | Fullstack Engineer & Systems Architect</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Meraf Legesse Sertse (mafi) is a fullstack developer in Addis Ababa, Ethiopia. Explore high-performance web applications, management systems, and mobile solutions.">
-<meta name="theme-color" content="#07090E">
-<link rel="canonical" href="https://meraf.github.io/">
-<link rel="icon" href="favicons.svg" type="image/svg+xml">
-<meta property="og:title" content="Meraf Legesse Sertse | Fullstack Engineer">
-<meta property="og:description" content="Websites, enterprise management systems, and mobile apps built in Addis Ababa. Explore live deployments & repositories.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://meraf.github.io/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Meraf Legesse Sertse","alternateName":"mafi","jobTitle":"Fullstack Developer","url":"https://meraf.github.io/","email":"mailto:meraflegesse@gmail.com","telephone":"+251924598198","address":{"@type":"PostalAddress","addressLocality":"Addis Ababa","addressCountry":"ET"},"sameAs":["https://github.com/meraf","https://linkedin.com/in/meraf-legesse","https://twitter.com/meraf_legesse","https://medium.com/@meraflegesse","https://t.me/meraf_legesse"]}</script>
-<script>try{var t=localStorage.getItem("t")||(matchMedia("(prefers-color-scheme:light)").matches?"light":"dark")}catch(e){t="dark"}document.documentElement.dataset.theme=t</script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap">
-<style>
-:root{
-  --bg:#07090E;
-  --bg-glow:radial-gradient(circle at 10% 10%, rgba(212,175,55,0.07) 0%, transparent 40%), radial-gradient(circle at 90% 90%, rgba(16,185,129,0.06) 0%, transparent 45%);
-  --sf:rgba(15, 20, 32, 0.75);
-  --sf-hover:rgba(22, 29, 46, 0.9);
-  --ln:rgba(40, 50, 75, 0.6);
-  --ln-hover:rgba(212, 175, 25, 0.5);
-  --tx:#F3F4F6;
-  --mu:#9CA3AF;
-  --ac:#D4AF37;
-  --ac-rgb:212,175,55;
-  --ac-glow:rgba(212,175,55,0.25);
-  --oa:#07090E;
-  color-scheme:dark;
-}
-:root[data-theme=light]{
-  --bg:#F8FAFC;
-  --bg-glow:radial-gradient(circle at 10% 10%, rgba(180,140,20,0.05) 0%, transparent 40%), radial-gradient(circle at 90% 90%, rgba(11,107,58,0.05) 0%, transparent 45%);
-  --sf:rgba(255, 255, 255, 0.85);
-  --sf-hover:rgba(255, 255, 255, 1);
-  --ln:rgba(226, 232, 240, 0.9);
-  --ln-hover:rgba(180, 140, 20, 0.5);
-  --tx:#0F172A;
-  --mu:#64748B;
-  --ac:#9A7B1C;
-  --ac-rgb:154,123,28;
-  --ac-glow:rgba(154,123,28,0.2);
-  --oa:#FFFFFF;
-  color-scheme:light;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:5rem}
-body{margin:0;width:100%;max-width:100vw;overflow-x:hidden;background:var(--bg);background-image:var(--bg-glow);background-attachment:fixed;color:var(--tx);font:400 1rem/1.7 'Plus Jakarta Sans',system-ui,sans-serif;-webkit-text-size-adjust:100%}
-a{color:inherit;text-decoration:none}
-h1,h2,h3{font-family:'Outfit',system-ui,sans-serif;margin:0}
-.wrap{width:min(1200px, 100% - 1.5rem);margin-inline:auto}
-:focus-visible{outline:3px solid var(--ac);outline-offset:3px}
+  <head>
+    <meta charset="utf-8" />
+    <title>Meraf Legesse Sertse | Fullstack Engineer & Systems Architect</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Meraf Legesse Sertse (mafi) is a fullstack developer in Addis Ababa, Ethiopia. Explore high-performance web applications, management systems, and mobile solutions."
+    />
+    <meta name="theme-color" content="#07090E" />
+    <link rel="canonical" href="https://meraf.github.io/" />
+    <link rel="icon" href="favicons.svg" type="image/svg+xml" />
+    <meta
+      property="og:title"
+      content="Meraf Legesse Sertse | Fullstack Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Websites, enterprise management systems, and mobile apps built in Addis Ababa. Explore live deployments & repositories."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://meraf.github.io/" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Meraf Legesse Sertse",
+        "alternateName": "mafi",
+        "jobTitle": "Fullstack Developer",
+        "url": "https://meraf.github.io/",
+        "email": "mailto:meraflegesse@gmail.com",
+        "telephone": "+251924598198",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Addis Ababa",
+          "addressCountry": "ET"
+        },
+        "sameAs": [
+          "https://github.com/meraf",
+          "https://linkedin.com/in/meraf-legesse",
+          "https://twitter.com/meraf_legesse",
+          "https://medium.com/@meraflegesse",
+          "https://t.me/meraf_legesse"
+        ]
+      }
+    </script>
+    <script>
+      try {
+        var t =
+          localStorage.getItem("t") ||
+          (matchMedia("(prefers-color-scheme:light)").matches
+            ? "light"
+            : "dark");
+      } catch (e) {
+        t = "dark";
+      }
+      document.documentElement.dataset.theme = t;
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Outfit:wght@600;700;800;900&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #07090e;
+        --bg-glow:
+          radial-gradient(
+            circle at 10% 10%,
+            rgba(212, 175, 55, 0.07) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 90%,
+            rgba(16, 185, 129, 0.06) 0%,
+            transparent 45%
+          );
+        --sf: rgba(15, 20, 32, 0.75);
+        --sf-hover: rgba(22, 29, 46, 0.9);
+        --ln: rgba(40, 50, 75, 0.6);
+        --ln-hover: rgba(212, 175, 25, 0.5);
+        --tx: #f3f4f6;
+        --mu: #9ca3af;
+        --ac: #d4af37;
+        --ac-rgb: 212, 175, 55;
+        --ac-glow: rgba(212, 175, 55, 0.25);
+        --oa: #07090e;
+        color-scheme: dark;
+      }
+      :root[data-theme="light"] {
+        --bg: #f8fafc;
+        --bg-glow:
+          radial-gradient(
+            circle at 10% 10%,
+            rgba(180, 140, 20, 0.05) 0%,
+            transparent 40%
+          ),
+          radial-gradient(
+            circle at 90% 90%,
+            rgba(11, 107, 58, 0.05) 0%,
+            transparent 45%
+          );
+        --sf: rgba(255, 255, 255, 0.85);
+        --sf-hover: rgba(255, 255, 255, 1);
+        --ln: rgba(226, 232, 240, 0.9);
+        --ln-hover: rgba(180, 140, 20, 0.5);
+        --tx: #0f172a;
+        --mu: #64748b;
+        --ac: #9a7b1c;
+        --ac-rgb: 154, 123, 28;
+        --ac-glow: rgba(154, 123, 28, 0.2);
+        --oa: #ffffff;
+        color-scheme: light;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 5rem;
+      }
+      body {
+        margin: 0;
+        width: 100%;
+        max-width: 100vw;
+        overflow-x: hidden;
+        background: var(--bg);
+        background-image: var(--bg-glow);
+        background-attachment: fixed;
+        color: var(--tx);
+        font:
+          400 1rem/1.7 "Plus Jakarta Sans",
+          system-ui,
+          sans-serif;
+        -webkit-text-size-adjust: 100%;
+      }
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+      h1,
+      h2,
+      h3 {
+        font-family: "Outfit", system-ui, sans-serif;
+        margin: 0;
+      }
+      .wrap {
+        width: min(1200px, 100% - 1.5rem);
+        margin-inline: auto;
+      }
+      :focus-visible {
+        outline: 3px solid var(--ac);
+        outline-offset: 3px;
+      }
 
-#progress{position:fixed;top:0;left:0;height:3px;background:linear-gradient(90deg, var(--ac), #10B981);width:0%;z-index:1000;transition:width .1s linear}
+      #progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--ac), #10b981);
+        width: 0%;
+        z-index: 1000;
+        transition: width 0.1s linear;
+      }
 
-/* Ultra-Slim Responsive Navbar */
-.nav{position:sticky;top:0;z-index:100;background:color-mix(in srgb, var(--bg) 85%, transparent);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--ln);transition:border-color .3s}
-.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:4.2rem;gap:.5rem}
-.logo-badge{display:flex;align-items:center;gap:.5rem;font:800 0.95rem 'Outfit',sans-serif;letter-spacing:-.03em;white-space:nowrap;margin-right:auto}
-.logo-icon{width:30px;height:30px;border-radius:8px;background:linear-gradient(135deg, var(--ac), #10B981);display:grid;place-content:center;color:var(--oa);font-weight:900;box-shadow:0 4px 12px var(--ac-glow)}
+      /* Ultra-Slim Responsive Navbar */
+      .nav {
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        background: color-mix(in srgb, var(--bg) 85%, transparent);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        border-bottom: 1px solid var(--ln);
+        transition: border-color 0.3s;
+      }
+      .nav .wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 4.2rem;
+        gap: 0.5rem;
+      }
+      .logo-badge {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        font:
+          800 0.95rem "Outfit",
+          sans-serif;
+        letter-spacing: -0.03em;
+        white-space: nowrap;
+        margin-right: auto;
+      }
+      .logo-icon {
+        width: 30px;
+        height: 30px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, var(--ac), #10b981);
+        display: grid;
+        place-content: center;
+        color: var(--oa);
+        font-weight: 900;
+        box-shadow: 0 4px 12px var(--ac-glow);
+      }
 
-.nav-right{display:flex;align-items:center;gap:1rem;margin-left:auto}
-.nav-links{display:flex;align-items:center;gap:.8rem}
-.nav-links a{color:var(--mu);font-weight:600;font-size:.825rem;transition:color .2s;white-space:nowrap}
-.nav-links a:hover{color:var(--tx)}
-.nav-repos{display:none} /* Hidden on small mobile screens */
+      .nav-right {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        margin-left: auto;
+      }
+      .nav-links {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+      }
+      .nav-links a {
+        color: var(--mu);
+        font-weight: 600;
+        font-size: 0.825rem;
+        transition: color 0.2s;
+        white-space: nowrap;
+      }
+      .nav-links a:hover {
+        color: var(--tx);
+      }
+      .nav-repos {
+        display: none;
+      } /* Hidden on small mobile screens */
 
-#th{width:34px;height:34px;border-radius:50%;background:var(--sf);border:1px solid var(--ln);color:var(--tx);display:grid;place-content:center;cursor:pointer;padding:0;transition:all .2s;flex-shrink:0}
-#th:hover{border-color:var(--ac);background:var(--sf-hover)}
+      #th {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--sf);
+        border: 1px solid var(--ln);
+        color: var(--tx);
+        display: grid;
+        place-content: center;
+        cursor: pointer;
+        padding: 0;
+        transition: all 0.2s;
+        flex-shrink: 0;
+      }
+      #th:hover {
+        border-color: var(--ac);
+        background: var(--sf-hover);
+      }
 
-@media(min-width:480px){
-  .logo-badge{font-size:1.1rem;gap:.75rem}
-  .logo-icon{width:36px;height:36px}
-  .nav-repos{display:inline} /* Appears on screens 480px and wider */
-  .nav-links{gap:1.4rem}
-  .nav-links a{font-size:.9rem}
-  .nav-right{gap:1.4rem}
-}
+      @media (min-width: 480px) {
+        .logo-badge {
+          font-size: 1.1rem;
+          gap: 0.75rem;
+        }
+        .logo-icon {
+          width: 36px;
+          height: 36px;
+        }
+        .nav-repos {
+          display: inline;
+        } /* Appears on screens 480px and wider */
+        .nav-links {
+          gap: 1.4rem;
+        }
+        .nav-links a {
+          font-size: 0.9rem;
+        }
+        .nav-right {
+          gap: 1.4rem;
+        }
+      }
 
-@media(min-width:768px){
-  .logo-badge{font-size:1.2rem}
-  .nav-links{gap:2rem}
-  .nav-links a{font-size:.95rem}
-  .nav-right{gap:2rem}
-  #th{width:38px;height:38px}
-}
+      @media (min-width: 768px) {
+        .logo-badge {
+          font-size: 1.2rem;
+        }
+        .nav-links {
+          gap: 2rem;
+        }
+        .nav-links a {
+          font-size: 0.95rem;
+        }
+        .nav-right {
+          gap: 2rem;
+        }
+        #th {
+          width: 38px;
+          height: 38px;
+        }
+      }
 
-.hero{padding:clamp(3rem,8vw,8rem) 0 clamp(2.5rem,5vw,4rem);position:relative}
-.status-pill{display:inline-flex;align-items:center;gap:.5rem;padding:.4rem 1rem;border-radius:999px;background:var(--sf);border:1px solid var(--ln);font-size:.8rem;font-weight:600;margin-bottom:1.5rem;box-shadow:0 6px 20px rgba(0,0,0,0.1);max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.status-dot{width:7px;height:7px;border-radius:50%;background:#10B981;box-shadow:0 0 8px #10B981;animation:pulse 2s infinite;flex-shrink:0}
-@keyframes pulse{0%{opacity:1}50%{opacity:.3}100%{opacity:1}}
-.hero h1{font-weight:900;font-size:clamp(2.4rem,8.5vw,6rem);line-height:1.05;letter-spacing:-.04em;margin-bottom:1.2rem;word-break:break-word}
-.hero h1 span{background:linear-gradient(135deg, var(--tx) 40%, var(--mu));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.hero h1 span.highlight{background:linear-gradient(135deg, var(--ac), #38BDF8);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.stripe{display:block;height:5px;width:160px;margin:1.5rem 0;border-radius:3px;background:linear-gradient(90deg,#10B981 0 33.3%,var(--ac) 33.3% 66.6%,#38BDF8 66.6%);box-shadow:0 0 15px var(--ac-glow)}
-.lead{font-size:clamp(1.05rem,2.2vw,1.3rem);color:var(--mu);max-width:44ch;margin:0 0 2rem;line-height:1.7}
-.cta-group{display:flex;flex-wrap:wrap;gap:.8rem;align-items:center;margin-bottom:2.5rem}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;padding:.8rem 1.6rem;border-radius:999px;background:var(--ac);color:var(--oa);font-weight:700;text-decoration:none;border:1px solid var(--ac);box-shadow:0 5px 20px var(--ac-glow);transition:all .3s cubic-bezier(.16,1,.3,1);font-size:.95rem}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 25px var(--ac-glow)}
-.btn.ghost{background:var(--sf);color:var(--tx);border-color:var(--ln);box-shadow:none}
-.btn.ghost:hover{border-color:var(--ac);background:var(--sf-hover)}
+      .hero {
+        padding: clamp(3rem, 8vw, 8rem) 0 clamp(2.5rem, 5vw, 4rem);
+        position: relative;
+      }
+      .status-pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.4rem 1rem;
+        border-radius: 999px;
+        background: var(--sf);
+        border: 1px solid var(--ln);
+        font-size: 0.8rem;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        max-width: 100%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+      .status-dot {
+        width: 7px;
+        height: 7px;
+        border-radius: 50%;
+        background: #10b981;
+        box-shadow: 0 0 8px #10b981;
+        animation: pulse 2s infinite;
+        flex-shrink: 0;
+      }
+      @keyframes pulse {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0.3;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+      .hero h1 {
+        font-weight: 900;
+        font-size: clamp(2.4rem, 8.5vw, 6rem);
+        line-height: 1.05;
+        letter-spacing: -0.04em;
+        margin-bottom: 1.2rem;
+        word-break: break-word;
+      }
+      .hero h1 span {
+        background: linear-gradient(135deg, var(--tx) 40%, var(--mu));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .hero h1 span.highlight {
+        background: linear-gradient(135deg, var(--ac), #38bdf8);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .stripe {
+        display: block;
+        height: 5px;
+        width: 160px;
+        margin: 1.5rem 0;
+        border-radius: 3px;
+        background: linear-gradient(
+          90deg,
+          #10b981 0 33.3%,
+          var(--ac) 33.3% 66.6%,
+          #38bdf8 66.6%
+        );
+        box-shadow: 0 0 15px var(--ac-glow);
+      }
+      .lead {
+        font-size: clamp(1.05rem, 2.2vw, 1.3rem);
+        color: var(--mu);
+        max-width: 44ch;
+        margin: 0 0 2rem;
+        line-height: 1.7;
+      }
+      .cta-group {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.8rem;
+        align-items: center;
+        margin-bottom: 2.5rem;
+      }
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.5rem;
+        padding: 0.8rem 1.6rem;
+        border-radius: 999px;
+        background: var(--ac);
+        color: var(--oa);
+        font-weight: 700;
+        text-decoration: none;
+        border: 1px solid var(--ac);
+        box-shadow: 0 5px 20px var(--ac-glow);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        font-size: 0.95rem;
+      }
+      .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 25px var(--ac-glow);
+      }
+      .btn.ghost {
+        background: var(--sf);
+        color: var(--tx);
+        border-color: var(--ln);
+        box-shadow: none;
+      }
+      .btn.ghost:hover {
+        border-color: var(--ac);
+        background: var(--sf-hover);
+      }
 
-.stats-bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:1rem;padding:1.2rem 1.5rem;border-radius:18px;background:var(--sf);border:1px solid var(--ln);backdrop-filter:blur(16px);box-shadow:0 12px 30px rgba(0,0,0,0.15)}
-.stat-item{display:flex;flex-direction:column;gap:.1rem}
-.stat-num{font-family:'Outfit',sans-serif;font-size:1.5rem;font-weight:800;color:var(--ac)}
-.stat-lbl{font-size:.8rem;font-weight:600;color:var(--mu);text-transform:uppercase;letter-spacing:.05em}
+      .stats-bar {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 1rem;
+        padding: 1.2rem 1.5rem;
+        border-radius: 18px;
+        background: var(--sf);
+        border: 1px solid var(--ln);
+        backdrop-filter: blur(16px);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+      }
+      .stat-item {
+        display: flex;
+        flex-direction: column;
+        gap: 0.1rem;
+      }
+      .stat-num {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.5rem;
+        font-weight: 800;
+        color: var(--ac);
+      }
+      .stat-lbl {
+        font-size: 0.8rem;
+        font-weight: 600;
+        color: var(--mu);
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+      }
 
-section{padding:clamp(4rem,8vw,6rem) 0;border-top:1px solid var(--ln)}
-h2{font-weight:800;font-size:clamp(2rem,4vw,2.75rem);letter-spacing:-.03em;margin-bottom:.5rem}
-.sub{color:var(--mu);max-width:58ch;margin:0 0 2.2rem;font-size:1rem}
+      section {
+        padding: clamp(4rem, 8vw, 6rem) 0;
+        border-top: 1px solid var(--ln);
+      }
+      h2 {
+        font-weight: 800;
+        font-size: clamp(2rem, 4vw, 2.75rem);
+        letter-spacing: -0.03em;
+        margin-bottom: 0.5rem;
+      }
+      .sub {
+        color: var(--mu);
+        max-width: 58ch;
+        margin: 0 0 2.2rem;
+        font-size: 1rem;
+      }
 
-.tools{display:flex;flex-wrap:wrap;gap:1rem;align-items:center;margin-bottom:1.5rem}
-.search-wrapper{position:relative;flex:1 1 240px;max-width:380px}
-#q{width:100%;font:inherit;font-size:.9rem;color:var(--tx);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.75rem 2.8rem .75rem 1.2rem;transition:all .25s;box-shadow:inset 0 2px 4px rgba(0,0,0,0.02)}
-#q:focus{border-color:var(--ac);background:var(--sf-hover);box-shadow:0 0 0 4px var(--ac-glow)}
-.kbd-hint{position:absolute;right:1rem;top:50%;transform:translateY(-50%);background:var(--ln);color:var(--mu);font-size:.7rem;font-weight:700;padding:.15rem .4rem;border-radius:4px;pointer-events:none}
-#chips{display:flex;flex-wrap:wrap;gap:.5rem}
-#chips button{font:inherit;font-size:.85rem;font-weight:600;cursor:pointer;color:var(--mu);background:var(--sf);border:1px solid var(--ln);border-radius:999px;padding:.5rem 1.1rem;transition:all .25s}
-#chips button:hover{color:var(--tx);border-color:var(--ln-hover)}
-#chips button[aria-pressed=true]{background:var(--ac);color:var(--oa);border-color:var(--ac);box-shadow:0 5px 15px var(--ac-glow)}
-#count{color:var(--mu);margin:0 0 1.2rem;font-size:.9rem;font-weight:600}
+      .tools {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        align-items: center;
+        margin-bottom: 1.5rem;
+      }
+      .search-wrapper {
+        position: relative;
+        flex: 1 1 240px;
+        max-width: 380px;
+      }
+      #q {
+        width: 100%;
+        font: inherit;
+        font-size: 0.9rem;
+        color: var(--tx);
+        background: var(--sf);
+        border: 1px solid var(--ln);
+        border-radius: 999px;
+        padding: 0.75rem 2.8rem 0.75rem 1.2rem;
+        transition: all 0.25s;
+        box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.02);
+      }
+      #q:focus {
+        border-color: var(--ac);
+        background: var(--sf-hover);
+        box-shadow: 0 0 0 4px var(--ac-glow);
+      }
+      .kbd-hint {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: var(--ln);
+        color: var(--mu);
+        font-size: 0.7rem;
+        font-weight: 700;
+        padding: 0.15rem 0.4rem;
+        border-radius: 4px;
+        pointer-events: none;
+      }
+      #chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      #chips button {
+        font: inherit;
+        font-size: 0.85rem;
+        font-weight: 600;
+        cursor: pointer;
+        color: var(--mu);
+        background: var(--sf);
+        border: 1px solid var(--ln);
+        border-radius: 999px;
+        padding: 0.5rem 1.1rem;
+        transition: all 0.25s;
+      }
+      #chips button:hover {
+        color: var(--tx);
+        border-color: var(--ln-hover);
+      }
+      #chips button[aria-pressed="true"] {
+        background: var(--ac);
+        color: var(--oa);
+        border-color: var(--ac);
+        box-shadow: 0 5px 15px var(--ac-glow);
+      }
+      #count {
+        color: var(--mu);
+        margin: 0 0 1.2rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+      }
 
-/* Bento Grid Cards - Fully Responsive */
-#grid{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fill,minmax(min(100%, 300px), 1fr))}
-.card{box-sizing:border-box;display:flex;flex-direction:column;justify-content:space-between;gap:1.2rem;min-height:240px;padding:1.6rem;border:1px solid var(--ln);border-radius:20px;background:var(--sf);backdrop-filter:blur(16px);transition:all .3s cubic-bezier(.16,1,.3,1);position:relative;overflow:hidden;word-break:break-word}
-.card::before{content:"";position:absolute;inset:0;background:radial-gradient(600px circle at var(--mouse-x, 0) var(--mouse-y, 0), rgba(212,175,55,0.08), transparent 40%);opacity:0;transition:opacity .3s;pointer-events:none}
-.card:hover{border-color:var(--ln-hover);transform:translateY(-4px);box-shadow:0 15px 30px rgba(0,0,0,0.2)}
-.card:hover::before{opacity:1}
-.card-top{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem}
-.card h3{font-size:1.35rem;line-height:1.2;font-weight:700;letter-spacing:-.02em;margin-bottom:.4rem}
-.card p{margin:0;color:var(--mu);font-size:.95rem;line-height:1.6}
-.url-display{display:inline-block;font-size:.8rem;font-family:monospace;color:var(--ac);background:rgba(var(--ac-rgb),0.08);padding:.25rem .5rem;border-radius:6px;margin:.5rem 0;word-break:break-all;border:1px dashed rgba(var(--ac-rgb),0.2)}
-.card.big{grid-column:span 1}
-@media(min-width:768px){.card.big{grid-column:span 2}}
-.cat{display:inline-flex;align-items:center;gap:.4rem;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--ac);background:rgba(var(--ac-rgb),0.1);padding:.3rem .8rem;border-radius:999px;border:1px solid rgba(var(--ac-rgb),0.2)}
-.live-indicator{display:inline-flex;align-items:center;gap:.3rem;font-size:.7rem;font-weight:700;color:#10B981;background:rgba(16,185,129,0.1);padding:.25rem .7rem;border-radius:999px;border:1px solid rgba(16,185,129,0.2)}
-.card-actions{display:flex;flex-wrap:wrap;gap:.6rem;margin-top:auto;padding-top:.8rem;border-top:1px solid var(--ln)}
-.btn-card{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;padding:.55rem 1rem;border-radius:999px;font-size:.8rem;font-weight:700;text-decoration:none;transition:all .2s;white-space:nowrap}
-.btn-card.primary{background:var(--ac);color:var(--oa);border:1px solid var(--ac);box-shadow:0 3px 12px var(--ac-glow)}
-.btn-card.primary:hover{transform:translateY(-1px);box-shadow:0 5px 15px var(--ac-glow)}
-.btn-card.ghost{background:var(--sf);color:var(--tx);border:1px solid var(--ln)}
-.btn-card.ghost:hover{border-color:var(--ac);background:var(--sf-hover)}
+      /* Bento Grid Cards - Fully Responsive */
+      #grid {
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+      }
+      .card {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.2rem;
+        min-height: 240px;
+        padding: 1.6rem;
+        border: 1px solid var(--ln);
+        border-radius: 20px;
+        background: var(--sf);
+        backdrop-filter: blur(16px);
+        transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        position: relative;
+        overflow: hidden;
+        word-break: break-word;
+      }
+      .card::before {
+        content: "";
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(
+          600px circle at var(--mouse-x, 0) var(--mouse-y, 0),
+          rgba(212, 175, 55, 0.08),
+          transparent 40%
+        );
+        opacity: 0;
+        transition: opacity 0.3s;
+        pointer-events: none;
+      }
+      .card:hover {
+        border-color: var(--ln-hover);
+        transform: translateY(-4px);
+        box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+      }
+      .card:hover::before {
+        opacity: 1;
+      }
+      .card-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+      }
+      .card h3 {
+        font-size: 1.35rem;
+        line-height: 1.2;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+        margin-bottom: 0.4rem;
+      }
+      .card p {
+        margin: 0;
+        color: var(--mu);
+        font-size: 0.95rem;
+        line-height: 1.6;
+      }
+      .url-display {
+        display: inline-block;
+        font-size: 0.8rem;
+        font-family: monospace;
+        color: var(--ac);
+        background: rgba(var(--ac-rgb), 0.08);
+        padding: 0.25rem 0.5rem;
+        border-radius: 6px;
+        margin: 0.5rem 0;
+        word-break: break-all;
+        border: 1px dashed rgba(var(--ac-rgb), 0.2);
+      }
+      .card.big {
+        grid-column: span 1;
+      }
+      @media (min-width: 768px) {
+        .card.big {
+          grid-column: span 2;
+        }
+      }
+      .cat {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        font-size: 0.75rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        color: var(--ac);
+        background: rgba(var(--ac-rgb), 0.1);
+        padding: 0.3rem 0.8rem;
+        border-radius: 999px;
+        border: 1px solid rgba(var(--ac-rgb), 0.2);
+      }
+      .live-indicator {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.3rem;
+        font-size: 0.7rem;
+        font-weight: 700;
+        color: #10b981;
+        background: rgba(16, 185, 129, 0.1);
+        padding: 0.25rem 0.7rem;
+        border-radius: 999px;
+        border: 1px solid rgba(16, 185, 129, 0.2);
+      }
+      .card-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+        margin-top: auto;
+        padding-top: 0.8rem;
+        border-top: 1px solid var(--ln);
+      }
+      .btn-card {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 0.4rem;
+        padding: 0.55rem 1rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-decoration: none;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      .btn-card.primary {
+        background: var(--ac);
+        color: var(--oa);
+        border: 1px solid var(--ac);
+        box-shadow: 0 3px 12px var(--ac-glow);
+      }
+      .btn-card.primary:hover {
+        transform: translateY(-1px);
+        box-shadow: 0 5px 15px var(--ac-glow);
+      }
+      .btn-card.ghost {
+        background: var(--sf);
+        color: var(--tx);
+        border: 1px solid var(--ln);
+      }
+      .btn-card.ghost:hover {
+        border-color: var(--ac);
+        background: var(--sf-hover);
+      }
 
-#none{color:var(--mu);padding:3rem 0;text-align:center;font-size:1.05rem}
+      #none {
+        color: var(--mu);
+        padding: 3rem 0;
+        text-align: center;
+        font-size: 1.05rem;
+      }
 
-.rl{list-style:none;margin:0;padding:0;display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fill,minmax(min(100%, 300px), 1fr))}
-.rl a{display:flex;flex-direction:column;gap:.7rem;height:100%;padding:1.5rem;border:1px solid var(--ln);border-radius:18px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;transition:all .3s;word-break:break-word}
-.rl a:hover{border-color:var(--ln-hover);transform:translateY(-3px);box-shadow:0 12px 25px rgba(0,0,0,0.15)}
-.rl b{font-family:'Outfit',sans-serif;font-size:1.15rem;letter-spacing:-.01em}
-.rl span{color:var(--mu);font-size:.9rem;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden;flex-grow:1}
-.rl i{display:flex;align-items:center;justify-content:space-between;font-style:normal;color:var(--mu);font-size:.8rem;margin-top:auto;padding-top:.8rem;border-top:1px solid var(--ln)}
-.rl em{background:rgba(var(--ac-rgb),0.1);color:var(--ac);padding:.2rem .6rem;border-radius:6px;font-style:normal;font-weight:700}
-.err{color:var(--mu);padding:2rem 0}
+      .rl {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+      }
+      .rl a {
+        display: flex;
+        flex-direction: column;
+        gap: 0.7rem;
+        height: 100%;
+        padding: 1.5rem;
+        border: 1px solid var(--ln);
+        border-radius: 18px;
+        background: var(--sf);
+        backdrop-filter: blur(16px);
+        text-decoration: none;
+        transition: all 0.3s;
+        word-break: break-word;
+      }
+      .rl a:hover {
+        border-color: var(--ln-hover);
+        transform: translateY(-3px);
+        box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+      }
+      .rl b {
+        font-family: "Outfit", sans-serif;
+        font-size: 1.15rem;
+        letter-spacing: -0.01em;
+      }
+      .rl span {
+        color: var(--mu);
+        font-size: 0.9rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        flex-grow: 1;
+      }
+      .rl i {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-style: normal;
+        color: var(--mu);
+        font-size: 0.8rem;
+        margin-top: auto;
+        padding-top: 0.8rem;
+        border-top: 1px solid var(--ln);
+      }
+      .rl em {
+        background: rgba(var(--ac-rgb), 0.1);
+        color: var(--ac);
+        padding: 0.2rem 0.6rem;
+        border-radius: 6px;
+        font-style: normal;
+        font-weight: 700;
+      }
+      .err {
+        color: var(--mu);
+        padding: 2rem 0;
+      }
 
-.cg{display:grid;gap:1.2rem;grid-template-columns:repeat(auto-fit,minmax(min(100%, 280px), 1fr));margin-bottom:2.5rem}
-.cg>*{display:flex;flex-direction:column;gap:.4rem;margin:0;padding:1.5rem;border:1px solid var(--ln);border-radius:18px;background:var(--sf);backdrop-filter:blur(16px);text-decoration:none;word-break:break-word;transition:all .3s}
-.cg a:hover,.copy-box:hover{border-color:var(--ln-hover);transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,0.1)}
-.copy-box{cursor:pointer;position:relative}
-.copy-feedback{position:absolute;top:1rem;right:1rem;background:var(--ac);color:var(--oa);font-size:.7rem;font-weight:800;padding:.2rem .5rem;border-radius:4px;opacity:0;transition:opacity .2s}
-.cg small{color:var(--mu);font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}
-.cg span,.cg a{font-weight:700;font-size:1rem}
-.soc{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:.6rem}
-.soc a{display:inline-flex;align-items:center;gap:.5rem;padding:.7rem 1.3rem;border:1px solid var(--ln);border-radius:999px;background:var(--sf);font-weight:600;font-size:.9rem;transition:all .25s}
-.soc a:hover{border-color:var(--ac);background:var(--sf-hover);transform:translateY(-2px);box-shadow:0 6px 15px var(--ac-glow)}
+      .cg {
+        display: grid;
+        gap: 1.2rem;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+        margin-bottom: 2.5rem;
+      }
+      .cg > * {
+        display: flex;
+        flex-direction: column;
+        gap: 0.4rem;
+        margin: 0;
+        padding: 1.5rem;
+        border: 1px solid var(--ln);
+        border-radius: 18px;
+        background: var(--sf);
+        backdrop-filter: blur(16px);
+        text-decoration: none;
+        word-break: break-word;
+        transition: all 0.3s;
+      }
+      .cg a:hover,
+      .copy-box:hover {
+        border-color: var(--ln-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      }
+      .copy-box {
+        cursor: pointer;
+        position: relative;
+      }
+      .copy-feedback {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: var(--ac);
+        color: var(--oa);
+        font-size: 0.7rem;
+        font-weight: 800;
+        padding: 0.2rem 0.5rem;
+        border-radius: 4px;
+        opacity: 0;
+        transition: opacity 0.2s;
+      }
+      .cg small {
+        color: var(--mu);
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+      }
+      .cg span,
+      .cg a {
+        font-weight: 700;
+        font-size: 1rem;
+      }
+      .soc {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.6rem;
+      }
+      .soc a {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.7rem 1.3rem;
+        border: 1px solid var(--ln);
+        border-radius: 999px;
+        background: var(--sf);
+        font-weight: 600;
+        font-size: 0.9rem;
+        transition: all 0.25s;
+      }
+      .soc a:hover {
+        border-color: var(--ac);
+        background: var(--sf-hover);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 15px var(--ac-glow);
+      }
 
-footer{border-top:1px solid var(--ln);padding:2.5rem 0;color:var(--mu);font-size:.9rem;background:color-mix(in srgb, var(--bg) 92%, #000 8%)}
-footer .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:1rem}
+      footer {
+        border-top: 1px solid var(--ln);
+        padding: 2.5rem 0;
+        color: var(--mu);
+        font-size: 0.9rem;
+        background: color-mix(in srgb, var(--bg) 92%, #000 8%);
+      }
+      footer .wrap {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 1rem;
+      }
 
-@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
-</style>
-</head>
-<body>
+      @media (prefers-reduced-motion: reduce) {
+        * {
+          animation: none !important;
+          transition: none !important;
+          scroll-behavior: auto !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="progress"></div>
 
-<div id="progress"></div>
-
-<nav class="nav">
-  <div class="wrap">
-    <a href="#" class="logo-badge">
-      <div class="logo-icon">M</div>
-      <span>Meraf Legesse</span>
-    </a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="#projects">Projects</a>
-        <a href="#repos" class="nav-repos">Repositories</a>
-        <a href="#contact">Contact</a>
+    <nav class="nav">
+      <div class="wrap">
+        <a href="#" class="logo-badge">
+          <div class="logo-icon">M</div>
+          <span>Meraf Legesse</span>
+        </a>
+        <div class="nav-right">
+          <div class="nav-links">
+            <a href="#projects">Projects</a>
+            <a href="#repos" class="nav-repos">Repositories</a>
+            <a href="#contact">Contact</a>
+          </div>
+          <button id="th" type="button" aria-label="Toggle theme">
+            <svg
+              width="15"
+              height="15"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+            >
+              <path
+                d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+              />
+            </svg>
+          </button>
+        </div>
       </div>
-      <button id="th" type="button" aria-label="Toggle theme">
-        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
-      </button>
-    </div>
-  </div>
-</nav>
+    </nav>
 
-<header class="hero wrap">
-  <div class="status-pill">
-    <span class="status-dot"></span>
-    <span>Based in Addis Ababa • Fullstack Engineer</span>
-  </div>
-  <h1><span>Meraf Legesse</span><span class="highlight"> Sertse</span></h1>
-  <i class="stripe"></i>
-  <p class="lead">Architecting high-performance web applications, scalable management systems, and robust mobile solutions with precision engineering.</p>
-  <div class="cta-group">
-    <a class="btn" href="#projects">
-      <span>Explore Projects</span>
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14m-7-7l7 7-7 7"/></svg>
-    </a>
-    <a class="btn ghost" href="#contact">Get in Touch</a>
-  </div>
-
-  <div class="stats-bar" id="statsBar">
-    <div class="stat-item">
-      <span class="stat-num" id="repoCountStat">9+</span>
-      <span class="stat-lbl">Core Projects</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num" id="githubStarsStat">Live</span>
-      <span class="stat-lbl">GitHub Sync</span>
-    </div>
-    <div class="stat-item">
-      <span class="stat-num">Addis Ababa</span>
-      <span class="stat-lbl">Location</span>
-    </div>
-  </div>
-</header>
-
-<main>
-  <section id="projects" class="wrap">
-    <h2>Featured Works</h2>
-    <p class="sub">Filter by category or search instantly. Press <kbd style="background:var(--ln);padding:.1rem .35rem;border-radius:4px;color:var(--tx);font-size:.8rem">/</kbd> anytime to focus search.</p>
-    <div class="tools">
-      <div class="search-wrapper">
-        <input id="q" type="search" placeholder="Search projects..." aria-label="Search projects">
-        <span class="kbd-hint">/</span>
+    <header class="hero wrap">
+      <div class="status-pill">
+        <span class="status-dot"></span>
+        <span>Based in Addis Ababa • Fullstack Engineer</span>
       </div>
-      <div id="chips"></div>
-    </div>
-    <p id="count" aria-live="polite"></p>
-    <div id="grid"></div>
-    <p id="none" hidden>No projects match your search query. Try clearing filters or resetting search.</p>
-    <noscript><p><a href="https://github.com/meraf?tab=repositories" target="_blank" rel="noopener">Browse all projects directly on GitHub</a></p></noscript>
-  </section>
-
-  <section id="repos" class="wrap">
-    <h2>Public Repositories</h2>
-    <p class="sub" id="rc">Fetching live public repositories from GitHub...</p>
-    <ul class="rl" id="rl"></ul>
-  </section>
-
-  <section id="contact" class="wrap">
-    <h2>Let's Collaborate</h2>
-    <p class="sub">Have an ambitious project, systems architecture need, or software proposal? Let's connect.</p>
-    <div class="cg">
-      <div class="copy-box" id="copyEmailBtn" title="Click to copy email">
-        <span class="copy-feedback" id="copyFeedback">Copied!</span>
-        <small>Email (Click to Copy)</small>
-        <span>meraflegesse@gmail.com</span>
+      <h1><span>Meraf Legesse</span><span class="highlight"> Sertse</span></h1>
+      <i class="stripe"></i>
+      <p class="lead">
+        Architecting high-performance web applications, scalable management
+        systems, and robust mobile solutions with precision engineering.
+      </p>
+      <div class="cta-group">
+        <a class="btn" href="#projects">
+          <span>Explore Projects</span>
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+          >
+            <path d="M5 12h14m-7-7l7 7-7 7" />
+          </svg>
+        </a>
+        <a class="btn ghost" href="#contact">Get in Touch</a>
       </div>
-      <a href="tel:+251924598198">
-        <small>Phone / Telegram</small>
-        <span>+251 92 459 8198</span>
-      </a>
-      <div>
-        <small>Based In</small>
-        <span>Addis Ababa, Ethiopia</span>
+
+      <div class="stats-bar" id="statsBar">
+        <div class="stat-item">
+          <span class="stat-num" id="repoCountStat">11+</span>
+          <span class="stat-lbl">Core Projects</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num" id="githubStarsStat">Live</span>
+          <span class="stat-lbl">GitHub Sync</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-num">Addis Ababa</span>
+          <span class="stat-lbl">Location</span>
+        </div>
       </div>
-    </div>
-    <ul class="soc">
-      <li><a href="https://github.com/meraf" target="_blank" rel="noopener">GitHub</a></li>
-      <li><a href="https://linkedin.com/in/meraf-legesse" target="_blank" rel="noopener">LinkedIn</a></li>
-      <li><a href="https://t.me/meraf_legesse" target="_blank" rel="noopener">Telegram</a></li>
-      <li><a href="https://twitter.com/meraf_legesse" target="_blank" rel="noopener">Twitter</a></li>
-      <li><a href="https://medium.com/@meraflegesse" target="_blank" rel="noopener">Medium</a></li>
-      <li><a href="https://www.reddit.com/user/Meraf_Legesse" target="_blank" rel="noopener">Reddit</a></li>
-      <li><a href="https://www.facebook.com/mafilegesse1" target="_blank" rel="noopener">Facebook</a></li>
-    </ul>
-  </section>
-</main>
-<footer style="display: flex; justify-content: center; align-items: center; text-align: center; width: 100%;">
-  
-  <div class="">
-    <span>© <span id="yr">2026</span> Meraf Legesse Sertse. All rights reserved.</span>
-  
-  </div>
-</footer>
+    </header>
 
-<script>
-const P=[
-{n:"Samket Technologies",c:"Business",s:1,r:[["Code","SamketTechnologies"]],live:"https://samket.vercel.app/",
- d:"Website and shop system for a computer and mobile sales and repair business.",
- l:"A public storefront with items, testimonials, location and online repair tickets, paired with a shop-side app for stock with low-stock warnings, sales, repair tickets and warranty."},
-{n:"Lamed English",c:"Education",s:1,r:[["Code","Lamed-English"],["Second repo","lamed_english"]],live:"https://lamed-english.vercel.app/",
- d:"English language learning project.",
- l:"An interactive English language learning project, kept across two repositories."},
-{n:"PhoneBackup",c:"Mobile",r:[["Code","PhoneBackup"]],live:"",
- d:"Android app that backs up new photos and videos to a private Telegram channel.",
- l:"Watches folders like DCIM, Pictures and WhatsApp, uploading each new photo and video once in sequence."},
-{n:"Saint Michael Website",c:"Web",r:[["Code","Saint-Michale-Website"]],live:"",
- d:"Public website for Saint Michael.",
- l:"The public website half of the Saint Michael project."},
-{n:"Saint Michael System",c:"Business",r:[["Code","Saint-Michale-System"]],live:"",
- d:"Management system built alongside the Saint Michael website.",
- l:"The management system counterpart for the Saint Michael project."},
-{n:"Luxury Fixtures",c:"Web",r:[["Code","luxury-fixtures"]],live:"",
- d:"Website for a luxury fixtures brand.",
- l:"A showcase web application for high-end luxury fixtures."},
-{n:"Food Ordering and Restaurant",c:"Food",r:[["Online Food System","Online-Food-Ordering-System"],["Restaurant Master","online-food-and-restaurant-master"]],live:"",
- d:"Restaurant and online food ordering systems in multiple versions.",
- l:"A family of restaurant and online food ordering solutions."},
-{n:"HIMS",c:"Business",r:[["Code","HIMS"]],live:"",
- d:"A fast, flexible and simple hospital management system.",
- l:"An enterprise-grade hospital management system."},
-{n:"Lyric Finder",c:"Web",r:[["Code","LyricFinder-"]],live:"",
- d:"An intuitive demo song and lyric finder.",
- l:"An intuitive web app for finding song lyrics instantly."}
-];
+    <main>
+      <section id="projects" class="wrap">
+        <h2>Featured Works</h2>
+        <p class="sub">
+          Filter by category or search instantly. Press
+          <kbd
+            style="
+              background: var(--ln);
+              padding: 0.1rem 0.35rem;
+              border-radius: 4px;
+              color: var(--tx);
+              font-size: 0.8rem;
+            "
+            >/</kbd
+          >
+          anytime to focus search.
+        </p>
+        <div class="tools">
+          <div class="search-wrapper">
+            <input
+              id="q"
+              type="search"
+              placeholder="Search projects..."
+              aria-label="Search projects"
+            />
+            <span class="kbd-hint">/</span>
+          </div>
+          <div id="chips"></div>
+        </div>
+        <p id="count" aria-live="polite"></p>
+        <div id="grid"></div>
+        <p id="none" hidden>
+          No projects match your search query. Try clearing filters or resetting
+          search.
+        </p>
+        <noscript
+          ><p>
+            <a
+              href="https://github.com/meraf?tab=repositories"
+              target="_blank"
+              rel="noopener"
+              >Browse all projects directly on GitHub</a
+            >
+          </p></noscript
+        >
+      </section>
 
-const $=s=>document.querySelector(s),G="https://github.com/meraf/",R=document.documentElement;
-let cat="All",term="";
-const cats=["All",...new Set(P.map(p=>p.c))];
+      <section id="repos" class="wrap">
+        <h2>Public Repositories</h2>
+        <p class="sub" id="rc">
+          Fetching live public repositories from GitHub...
+        </p>
+        <ul class="rl" id="rl"></ul>
+      </section>
 
-$("#chips").innerHTML=cats.map(c=>`<button type="button" aria-pressed="${c==="All"}">${c}</button>`).join("");
+      <section id="contact" class="wrap">
+        <h2>Let's Collaborate</h2>
+        <p class="sub">
+          Have an ambitious project, systems architecture need, or software
+          proposal? Let's connect.
+        </p>
+        <div class="cg">
+          <div class="copy-box" id="copyEmailBtn" title="Click to copy email">
+            <span class="copy-feedback" id="copyFeedback">Copied!</span>
+            <small>Email (Click to Copy)</small>
+            <span>meraflegesse@gmail.com</span>
+          </div>
+          <a href="tel:+251924598198">
+            <small>Phone / Telegram</small>
+            <span>+251 92 459 8198</span>
+          </a>
+          <div>
+            <small>Based In</small>
+            <span>Addis Ababa, Ethiopia</span>
+          </div>
+        </div>
+        <ul class="soc">
+          <li>
+            <a href="https://github.com/meraf" target="_blank" rel="noopener"
+              >GitHub</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://linkedin.com/in/meraf-legesse"
+              target="_blank"
+              rel="noopener"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://t.me/meraf_legesse" target="_blank" rel="noopener"
+              >Telegram</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://twitter.com/meraf_legesse"
+              target="_blank"
+              rel="noopener"
+              >Twitter</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://medium.com/@meraflegesse"
+              target="_blank"
+              rel="noopener"
+              >Medium</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.reddit.com/user/Meraf_Legesse"
+              target="_blank"
+              rel="noopener"
+              >Reddit</a
+            >
+          </li>
+          <li>
+            <a
+              href="https://www.facebook.com/mafilegesse1"
+              target="_blank"
+              rel="noopener"
+              >Facebook</a
+            >
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer
+      style="
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 100%;
+      "
+    >
+      <div class="">
+        <span
+          >© <span id="yr">2026</span> Meraf Legesse Sertse. All rights
+          reserved.</span
+        >
+      </div>
+    </footer>
 
-function draw(){
- const L=P.filter(p=>(cat==="All"||p.c===cat)&&(p.n+" "+p.d+" "+p.c).toLowerCase().includes(term));
- $("#grid").innerHTML=L.map(p=>`
-  <article class="card${p.s?" big":""}">
+    <script>
+      const P = [
+        {
+          n: "Elite Entertainment",
+          c: "Entertainment",
+          s: 1,
+          r: [["Code", "elite-ent"]],
+          live: "https://eliteent-plum.vercel.app/",
+          d: "Modern web platform for Elite Entertainment showcasing events and services.",
+          l: "An immersive digital platform designed for Elite Entertainment to highlight events, media showcases, and client engagement.",
+        },
+        {
+          n: "Adulala Resort",
+          c: "Hospitality",
+          s: 1,
+          r: [["Code", "adulala-resort"]],
+          live: "https://adulala-resort.onrender.com/",
+          d: "Official web platform and booking portal for Adulala Resort.",
+          l: "A high-end resort web application featuring accommodation details, amenities, gallery, and guest reservation workflows.",
+        },
+        {
+          n: "Samket Technologies",
+          c: "Business",
+          s: 1,
+          r: [["Code", "SamketTechnologies"]],
+          live: "https://samket.vercel.app/",
+          d: "Website and shop system for a computer and mobile sales and repair business.",
+          l: "A public storefront with items, testimonials, location and online repair tickets, paired with a shop-side app for stock with low-stock warnings, sales, repair tickets and warranty.",
+        },
+        {
+          n: "Lamed English",
+          c: "Education",
+          s: 1,
+          r: [
+            ["Code", "Lamed-English"],
+            ["Second repo", "lamed_english"],
+          ],
+          live: "https://lamed-english.vercel.app/",
+          d: "English language learning project.",
+          l: "An interactive English language learning project, kept across two repositories.",
+        },
+        {
+          n: "PhoneBackup",
+          c: "Mobile",
+          r: [["Code", "PhoneBackup"]],
+          live: "",
+          d: "Android app that backs up new photos and videos to a private Telegram channel.",
+          l: "Watches folders like DCIM, Pictures and WhatsApp, uploading each new photo and video once in sequence.",
+        },
+        {
+          n: "Saint Michael Website",
+          c: "Web",
+          r: [["Code", "Saint-Michale-Website"]],
+          live: "",
+          d: "Public website for Saint Michael.",
+          l: "The public website half of the Saint Michael project.",
+        },
+        {
+          n: "Saint Michael System",
+          c: "Business",
+          r: [["Code", "Saint-Michale-System"]],
+          live: "",
+          d: "Management system built alongside the Saint Michael website.",
+          l: "The management system counterpart for the Saint Michael project.",
+        },
+        {
+          n: "Luxury Fixtures",
+          c: "Web",
+          r: [["Code", "luxury-fixtures"]],
+          live: "",
+          d: "Website for a luxury fixtures brand.",
+          l: "A showcase web application for high-end luxury fixtures.",
+        },
+        {
+          n: "Food Ordering and Restaurant",
+          c: "Food",
+          r: [
+            ["Online Food System", "Online-Food-Ordering-System"],
+            ["Restaurant Master", "online-food-and-restaurant-master"],
+          ],
+          live: "",
+          d: "Restaurant and online food ordering systems in multiple versions.",
+          l: "A family of restaurant and online food ordering solutions.",
+        },
+        {
+          n: "HIMS",
+          c: "Business",
+          r: [["Code", "HIMS"]],
+          live: "",
+          d: "A fast, flexible and simple hospital management system.",
+          l: "An enterprise-grade hospital management system.",
+        },
+        {
+          n: "Lyric Finder",
+          c: "Web",
+          r: [["Code", "LyricFinder-"]],
+          live: "",
+          d: "An intuitive demo song and lyric finder.",
+          l: "An intuitive web app for finding song lyrics instantly.",
+        },
+      ];
+
+      const $ = (s) => document.querySelector(s),
+        G = "https://github.com/meraf/",
+        R = document.documentElement;
+      let cat = "All",
+        term = "";
+      const cats = ["All", ...new Set(P.map((p) => p.c))];
+
+      $("#chips").innerHTML = cats
+        .map(
+          (c) =>
+            `<button type="button" aria-pressed="${c === "All"}">${c}</button>`,
+        )
+        .join("");
+
+      function draw() {
+        const L = P.filter(
+          (p) =>
+            (cat === "All" || p.c === cat) &&
+            (p.n + " " + p.d + " " + p.c).toLowerCase().includes(term),
+        );
+        $("#grid").innerHTML = L.map(
+          (p) => `
+  <article class="card${p.s ? " big" : ""}">
     <div>
       <div class="card-top">
         <span class="cat">${p.c}</span>
-        ${p.live ? '<span class="live-indicator">● Live App</span>' : ''}
+        ${p.live ? '<span class="live-indicator">● Live App</span>' : ""}
       </div>
       <div>
         <h3>${p.n}</h3>
-        ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="url-display">🔗 ${p.live}</a>` : ''}
-        <p>${p.l||p.d}</p>
+        ${p.live ? `<a href="${p.live}" target="_blank" rel="noopener" class="url-display">🔗 ${p.live}</a>` : ""}
+        <p>${p.l || p.d}</p>
       </div>
     </div>
     <div class="card-actions">
-      ${p.live ? `<a class="btn-card primary" href="${p.live}" target="_blank" rel="noopener">Open Live Site →</a>` : ''}
-      ${p.r.map(([t,r])=>`<a class="btn-card ghost" href="${G+r}" target="_blank" rel="noopener">${p.r.length>1?t:"GitHub Code"}</a>`).join("")}
+      ${p.live ? `<a class="btn-card primary" href="${p.live}" target="_blank" rel="noopener">Open Live Site →</a>` : ""}
+      ${p.r.map(([t, r]) => `<a class="btn-card ghost" href="${G + r}" target="_blank" rel="noopener">${p.r.length > 1 ? t : "GitHub Code"}</a>`).join("")}
     </div>
-  </article>`).join("");
- 
- $("#none").hidden=L.length>0;
- $("#count").textContent=`Showing ${L.length} of ${P.length} projects`;
+  </article>`,
+        ).join("");
 
- document.querySelectorAll('.card').forEach(card => {
-  card.onmousemove = e => {
-   const rect = card.getBoundingClientRect();
-   card.style.setProperty('--mouse-x', `${e.clientX - rect.left}px`);
-   card.style.setProperty('--mouse-y', `${e.clientY - rect.top}px`);
-  };
- });
-}
+        $("#none").hidden = L.length > 0;
+        $("#count").textContent = `Showing ${L.length} of ${P.length} projects`;
 
-$("#chips").onclick=e=>{
- const b=e.target.closest("button");if(!b)return;
- cat=b.textContent;
- [...$("#chips").children].forEach(x=>x.setAttribute("aria-pressed",x===b));
- draw();
-};
+        document.querySelectorAll(".card").forEach((card) => {
+          card.onmousemove = (e) => {
+            const rect = card.getBoundingClientRect();
+            card.style.setProperty("--mouse-x", `${e.clientX - rect.left}px`);
+            card.style.setProperty("--mouse-y", `${e.clientY - rect.top}px`);
+          };
+        });
+      }
 
-$("#q").oninput=e=>{
- term=e.target.value.trim().toLowerCase();
- draw();
-};
+      $("#chips").onclick = (e) => {
+        const b = e.target.closest("button");
+        if (!b) return;
+        cat = b.textContent;
+        [...$("#chips").children].forEach((x) =>
+          x.setAttribute("aria-pressed", x === b),
+        );
+        draw();
+      };
 
-window.addEventListener('keydown', e => {
- if(e.key==='/' && document.activeElement!==$('#q')){
-  e.preventDefault();
-  $('#q').focus();
- }
-});
+      $("#q").oninput = (e) => {
+        term = e.target.value.trim().toLowerCase();
+        draw();
+      };
 
-$('#copyEmailBtn').onclick = () => {
- navigator.clipboard.writeText('meraflegesse@gmail.com').then(() => {
-  const fb = $('#copyFeedback');
-  fb.style.opacity = '1';
-  setTimeout(() => fb.style.opacity = '0', 1500);
- });
-};
+      window.addEventListener("keydown", (e) => {
+        if (e.key === "/" && document.activeElement !== $("#q")) {
+          e.preventDefault();
+          $("#q").focus();
+        }
+      });
 
-$("#th").onclick=()=>{
- const t=R.dataset.theme==="light"?"dark":"light";
- R.dataset.theme=t;
- try{localStorage.setItem("t",t)}catch(e){}
-};
+      $("#copyEmailBtn").onclick = () => {
+        navigator.clipboard.writeText("meraflegesse@gmail.com").then(() => {
+          const fb = $("#copyFeedback");
+          fb.style.opacity = "1";
+          setTimeout(() => (fb.style.opacity = "0"), 1500);
+        });
+      };
 
-window.onscroll = () => {
- const h = document.documentElement;
- const st = h.scrollTop || document.body.scrollTop;
- const sh = h.scrollHeight - h.clientHeight;
- $('#progress').style.width = `${(st / sh) * 100}%`;
-};
+      $("#th").onclick = () => {
+        const t = R.dataset.theme === "light" ? "dark" : "light";
+        R.dataset.theme = t;
+        try {
+          localStorage.setItem("t", t);
+        } catch (e) {}
+      };
 
-$("#yr").textContent=new Date().getFullYear();
-draw();
+      window.onscroll = () => {
+        const h = document.documentElement;
+        const st = h.scrollTop || document.body.scrollTop;
+        const sh = h.scrollHeight - h.clientHeight;
+        $("#progress").style.width = `${(st / sh) * 100}%`;
+      };
 
-let loaded=0;
-function loadRepos(){
- if(loaded++)return;
- fetch("https://api.github.com/users/meraf/repos?per_page=100&sort=pushed")
- .then(r=>r.ok?r.json():Promise.reject())
- .then(a=>{
-  $("#rc").textContent=`${a.length} public repositories fetched live from GitHub, newest activity first.`;
-  $('#repoCountStat').textContent = `${a.length}+`;
-  $('#githubStarsStat').textContent = 'Synced';
-  $("#rl").innerHTML=a.map(r=>`
+      $("#yr").textContent = new Date().getFullYear();
+      draw();
+
+      let loaded = 0;
+      function loadRepos() {
+        if (loaded++) return;
+        fetch(
+          "https://api.github.com/users/meraf/repos?per_page=100&sort=pushed",
+        )
+          .then((r) => (r.ok ? r.json() : Promise.reject()))
+          .then((a) => {
+            $("#rc").textContent =
+              `${a.length} public repositories fetched live from GitHub, newest activity first.`;
+            $("#repoCountStat").textContent = `${a.length}+`;
+            $("#githubStarsStat").textContent = "Synced";
+            $("#rl").innerHTML = a
+              .map(
+                (r) => `
     <li>
       <a href="${esc(r.html_url)}" target="_blank" rel="noopener">
         <b>${esc(r.name)}</b>
-        <span>${esc(r.description||"No description yet")}</span>
-        <i><em>${esc(r.language||"Code")}</em><span>${new Date(r.pushed_at).toLocaleDateString("en",{month:"short",year:"numeric"})}</span></i>
+        <span>${esc(r.description || "No description yet")}</span>
+        <i><em>${esc(r.language || "Code")}</em><span>${new Date(r.pushed_at).toLocaleDateString("en", { month: "short", year: "numeric" })}</span></i>
       </a>
-    </li>`).join("");
- })
- .catch(()=>{$("#rc").innerHTML='Unable to load GitHub repositories directly. <a href="https://github.com/meraf?tab=repositories" target="_blank" rel="noopener">View full repository list on GitHub →</a>'});
-}
+    </li>`,
+              )
+              .join("");
+          })
+          .catch(() => {
+            $("#rc").innerHTML =
+              'Unable to load GitHub repositories directly. <a href="https://github.com/meraf?tab=repositories" target="_blank" rel="noopener">View full repository list on GitHub →</a>';
+          });
+      }
 
-const esc=s=>String(s).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+      const esc = (s) =>
+        String(s).replace(
+          /[&<>"]/g,
+          (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c],
+        );
 
-"IntersectionObserver" in window?new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){loadRepos();o.disconnect()}},{rootMargin:"400px"}).observe($("#repos")):loadRepos();
-</script>
-</body>
+      "IntersectionObserver" in window
+        ? new IntersectionObserver(
+            (e, o) => {
+              if (e[0].isIntersecting) {
+                loadRepos();
+                o.disconnect();
+              }
+            },
+            { rootMargin: "400px" },
+          ).observe($("#repos"))
+        : loadRepos();
+    </script>
+  </body>
 </html>
